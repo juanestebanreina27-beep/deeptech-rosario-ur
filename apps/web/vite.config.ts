@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url'
 const dir = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  // GitHub Pages project site; override with VITE_BASE=/ for Vercel root
-  base: process.env.VITE_BASE || '/deeptech-rosario-ur/',
+  // Vercel (root): VITE_BASE=/  ·  GitHub Pages: VITE_BASE=/deeptech-rosario-ur/
+  base: process.env.VITE_BASE || '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

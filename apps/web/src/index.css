@@ -12,6 +12,15 @@
 :root {
   --ur-red: #C8102E;
   --ur-red-hover: #9a0c24;
+  --ur-ink: #0c0c0c;
+  --ur-cream: #faf8f6;
+}
+
+/* Logo oficial: nitidez en pantallas retina */
+img[alt*='Universidad del Rosario'],
+img[alt*='Rosario'] {
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 @keyframes heroReveal {

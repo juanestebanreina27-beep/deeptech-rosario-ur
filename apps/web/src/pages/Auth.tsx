@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { SiteNav } from '@/components/SiteNav'
 import { demoStore } from '@/lib/demoStore'
 import { isSupabaseConfigured, supabase } from '@/lib/supabase/client'
+import { updateConsent } from '@/lib/supabase/api'
 
 export function AuthRegistro() {
   const nav = useNavigate()
@@ -12,11 +13,13 @@ export function AuthRegistro() {
   const [consent, setConsent] = useState(false)
   const [veraz, setVeraz] = useState(false)
   const [err, setErr] = useState('')
+  const [info, setInfo] = useState('')
   const [loading, setLoading] = useState(false)
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     setErr('')
+    setInfo('')
     if (!consent) {
       setErr('Debe autorizar el tratamiento de datos.')
       return
@@ -28,28 +31,43 @@ export function AuthRegistro() {
     setLoading(true)
     try {
       if (isSupabaseConfigured && supabase) {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: { data: { full_name: name } },
         })
         if (error) throw error
-        await supabase.from('profiles').update({
-          full_name: name,
-          consent_at: new Date().toISOString(),
-          privacy_version: 'ur-deeptech-v1',
-        }).eq('email', email)
+        // Profile trigger may lag; try consent update when session exists
+        if (data.session) {
+          try {
+            await updateConsent(name)
+          } catch {
+            /* profile row may still be creating */
+            await supabase.from('profiles').update({
+              full_name: name,
+              consent_at: new Date().toISOString(),
+              privacy_version: 'ur-deeptech-v1',
+            }).eq('id', data.user!.id)
+          }
+          demoStore.register(email, name, true)
+          nav('/app')
+          return
+        }
+        setInfo(
+          'Cuenta creada. Si el proyecto exige confirmación de correo, revise su bandeja e inicie sesión después.',
+        )
+        return
       }
       demoStore.register(email, name, true)
       nav('/app')
     } catch (ex: unknown) {
       const msg = ex instanceof Error ? ex.message : 'Error de registro'
-      // still allow demo
-      demoStore.register(email, name, true)
-      if (isSupabaseConfigured) setErr(msg + ' — sesión demo local activada.')
-      else nav('/app')
-      if (!isSupabaseConfigured) nav('/app')
-      else nav('/app')
+      if (isSupabaseConfigured) {
+        setErr(msg)
+      } else {
+        demoStore.register(email, name, true)
+        nav('/app')
+      }
     } finally {
       setLoading(false)
     }
@@ -73,6 +91,7 @@ export function AuthRegistro() {
           <span>Declaro que la información que suministraré es veraz y completa.</span>
         </label>
         {err && <p className="text-sm text-red-600">{err}</p>}
+        {info && <p className="text-sm text-emerald-700">{info}</p>}
         <button
           type="submit"
           disabled={loading}
@@ -83,6 +102,9 @@ export function AuthRegistro() {
         <p className="text-center text-sm text-zinc-500">
           ¿Ya tienes cuenta? <Link to="/auth/login" className="text-[#C8102E]">Ingresar</Link>
         </p>
+        {!isSupabaseConfigured && (
+          <p className="text-center text-xs text-amber-700">Modo demo local (sin Supabase)</p>
+        )}
       </form>
     </AuthShell>
   )
@@ -93,21 +115,31 @@ export function AuthLogin() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [err, setErr] = useState('')
+  const [loading, setLoading] = useState(false)
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     setErr('')
+    setLoading(true)
     try {
       if (isSupabaseConfigured && supabase) {
         const { error } = await supabase.auth.signInWithPassword({ email, password })
         if (error) throw error
+        demoStore.login(email)
+        nav('/app')
+        return
       }
       demoStore.login(email)
       nav('/app')
     } catch (ex: unknown) {
-      demoStore.login(email)
-      nav('/app')
-      if (ex instanceof Error) setErr(ex.message)
+      if (isSupabaseConfigured) {
+        setErr(ex instanceof Error ? ex.message : 'Error al ingresar')
+      } else {
+        demoStore.login(email)
+        nav('/app')
+      }
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -116,13 +148,19 @@ export function AuthLogin() {
       <form onSubmit={onSubmit} className="space-y-4">
         <Field label="Correo" type="email" value={email} onChange={setEmail} required />
         <Field label="Contraseña" type="password" value={password} onChange={setPassword} required />
-        {err && <p className="text-sm text-amber-700">{err} (modo demo si falla Supabase)</p>}
-        <button type="submit" className="w-full bg-[#C8102E] text-white py-3 rounded-full font-medium text-sm">
-          Ingresar
+        {err && <p className="text-sm text-red-600">{err}</p>}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-[#C8102E] text-white py-3 rounded-full font-medium text-sm"
+        >
+          {loading ? 'Ingresando…' : 'Ingresar'}
         </button>
-        <p className="text-center text-sm text-zinc-500">
-          Tip admin demo: usa un correo que contenga <code>admin</code>
-        </p>
+        {!isSupabaseConfigured && (
+          <p className="text-center text-sm text-zinc-500">
+            Tip admin demo: usa un correo que contenga <code>admin</code>
+          </p>
+        )}
       </form>
     </AuthShell>
   )
