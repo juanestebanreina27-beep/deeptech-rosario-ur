@@ -1,84 +1,23 @@
-# Estado de implementación y despliegue
+﻿# Estado deploy — 2026-08-02 (sesión actual)
 
-**Fecha:** 2026-08-02  
-**Producto:** DeepTech Rosario v1  
+## Hecho en código
+- Capa Supabase `apps/web/src/lib/supabase/api.ts` (applications, answers, IRL, submit edge)
+- Auth / Dashboard / Wizard / Resultado dual-mode (Supabase o demo local)
+- `vite.config.ts` base `/` (Vercel) + `vercel.json` SPA rewrites
+- Edge function `submit-application` + `motor.ts` + rules catalog en repo
+- Push a GitHub: `main` @ https://github.com/juanestebanreina27-beep/deeptech-rosario-ur
 
----
+## Vercel
+- Team MCP: `juanestebanreina27-2954s-projects` (`team_aWsfSbAwN4Ie54lVSmOk2ssM`)
+- Proyecto existente `deeptech-rosario` es **otra app Next.js** (Deeptech Transfer). NO sobrescribir.
+- Proyecto objetivo nuevo: **`deeptech-rosario-ur`**
+- Payload listo: `apps/web/deploy-ready.cjs` / `C:\Users\grana\vercel_tool_args.json` (36 files)
 
-## Qué quedó construido
+## Supabase
+- **Falta access token / proyecto cloud** en esta máquina (sin `SUPABASE_ACCESS_TOKEN`)
+- SQL listo: `supabase/migrations/001_init.sql` + `002` + `003`
+- Edge function lista para `supabase functions deploy submit-application`
 
-| Pieza | Estado |
-|-------|--------|
-| App React + Vite + Tailwind | ✅ `apps/web` |
-| Motor `motor_v1.1` + 11 tests | ✅ `npm test` verde |
-| Build producción | ✅ `npm run build` |
-| Modo demo (sin Supabase) | ✅ localStorage + motor local |
-| SQL 001–003 Supabase | ✅ en `supabase/migrations` |
-| Edge function stub | ✅ `supabase/functions/submit-application` |
-| Repo GitHub | ✅ https://github.com/juanestebanreina27-beep/deeptech-rosario-ur |
-| GitHub Pages | ✅ https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/ |
-| Vercel CLI | ⚠️ cuenta local sin acceso al team MCP; usar import desde GitHub |
-| Supabase proyecto cloud | ⬜ crear y pegar env (sin token en sesión) |
-| API IA informes | ⬜ opcional / skipped |
-
----
-
-## URL pública (demo completa del flujo)
-
-**https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/**
-
-Funciona **sin Supabase** (modo demo):
-
-1. Inscribirse (cualquier email; con `admin` en el correo → rol admin)  
-2. Nueva postulación → wizard  
-3. Enviar → descarte o score + radar IRL  
-4. Panel admin si email contiene `admin`
-
----
-
-## Conectar Supabase (5 minutos)
-
-1. Crear proyecto en https://supabase.com  
-2. SQL Editor → ejecutar en orden:  
-   - `supabase/migrations/001_init.sql`  
-   - `supabase/migrations/002_security_hardening.sql`  
-   - `supabase/migrations/003_storage_policies.sql`  
-3. Project Settings → API → copiar URL y anon key  
-4. En Vercel o GitHub Actions / Pages rebuild, env:
-
-```
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJ...
-VITE_BASE=/
-```
-
-5. Para Vercel root domain: `VITE_BASE=/` y root directory `apps/web`.
-
----
-
-## Conectar Vercel (recomendado producción)
-
-1. https://vercel.com/new  
-2. Import `juanestebanreina27-beep/deeptech-rosario-ur`  
-3. Root Directory: `apps/web`  
-4. Env: `VITE_BASE=/` + Supabase keys  
-5. Deploy  
-
-(La sesión de agente tiene MCP Vercel en team `juanestebanreina27-2954s-projects`; el CLI local no tenía scope. Import desde GitHub es el camino más estable.)
-
----
-
-## Cómo probar el motor localmente
-
-```bash
-cd apps/web
-npm install
-npm test
-npm run dev
-```
-
----
-
-## IA
-
-Sin `AI_API_KEY` el producto **no se bloquea**. Informe = skipped.
+## URLs
+- GitHub Pages demo: https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/
+- Vercel (pendiente de deploy MCP o import Git): `https://deeptech-rosario-ur.vercel.app` (tras deploy)
