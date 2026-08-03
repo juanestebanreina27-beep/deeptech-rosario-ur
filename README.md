@@ -2,12 +2,11 @@
 
 Proyecto ejecutable a partir del brief de contraparte: **prompt maestro + datos limpios + plan por etapas**.
 
-> **Estado actual:** **GO para implementación técnica** tras auditoría multinacional (4 rondas).  
-> Motor **`motor_v1.1`** + catálogo ejecutable + SQL seguridad 001–003.  
-> Runtime: **Supabase + Vercel** (no backend en tu PC). IA informes: **opcional**.  
-> **Veredicto:** `05_debate_validacion/GO_IMPLEMENTACION.md`  
-> **Brief build:** `04_plan/PRODUCT_BRIEF_IMPLEMENTACION.md`  
-> **Prompt cloud:** `06_produccion_supabase_vercel/PROMPT_IMPLEMENTACION_CLOUD.md`
+> **Estado:** **APP IMPLEMENTADA Y PUBLICADA** (modo demo completo + motor real).  
+> **URL live:** https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/  
+> **Código:** https://github.com/juanestebanreina27-beep/deeptech-rosario-ur  
+> Motor **`motor_v1.1`** (11 tests). Supabase/Vercel: conectar env (ver `06_produccion_supabase_vercel/DEPLOY_STATUS.md`).  
+> IA informes: **opcional / skipped** sin API key.
 
 ---
 
