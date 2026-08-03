@@ -20,3 +20,7 @@ apps/web/public/assets/*.mp4
 .vercel
 **/.vercel
 00_archivo_original/
+
+apps/web/.env.production
+apps/web/.env.local
+apps/web/.env
