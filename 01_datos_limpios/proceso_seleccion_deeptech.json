@@ -1,0 +1,142 @@
+{
+  "titulo": "Proceso de selección y evaluación — Transferencia DeepTech U. Rosario",
+  "objetivo": "Seleccionar, evaluar y diagnosticar emprendimientos deeptech con base en postulación, criterios de descarte, score ponderado y madurez KTH IRL, con contraste por IA.",
+  "flujo": [
+    {
+      "paso": 1,
+      "id": "postulacion",
+      "nombre": "Formulario de postulación",
+      "descripcion": "El líder completa datos de equipo, modelo de negocio e innovación/tecnología.",
+      "entrada": "Respuestas del formulario (texto, niveles, archivos opcionales)",
+      "salida": "Expediente de postulación estructurado"
+    },
+    {
+      "paso": 2,
+      "id": "filtros_entrada",
+      "nombre": "Variables básicas que descartan la selección de entrada",
+      "descripcion": "Filtros binarios de elegibilidad. Si se cumple alguna condición de descarte, la postulación no avanza.",
+      "criterios_descarte": [
+        "El investigador o profesor no tiene vínculo con la universidad",
+        "Solo ideas/conceptos (sin prototipos ni productos mínimos viables)",
+        "Tiene más de 3 años con operación comercial",
+        "No adapta tecnología ni tiene un desarrollo tecnológico que soporte el futuro emprendimiento"
+      ],
+      "salida": "Apto / No apto"
+    },
+    {
+      "paso": 3,
+      "id": "clasificacion_tipo",
+      "nombre": "Clasificación del tipo de postulación",
+      "descripcion": "Define qué dimensiones KTH IRL se miden según el perfil del proyecto.",
+      "tipos": [
+        {
+          "id": "desarrollo_tecnologico",
+          "nombre": "Desarrollo tecnológico / Resultado de investigación",
+          "descripcion": "Están desarrollando una tecnología producto de una investigación o proyecto científico",
+          "dimensiones_irl": [
+            "TRL",
+            "BRL",
+            "IPRL",
+            "MRL",
+            "FRL",
+            "TERL"
+          ]
+        },
+        {
+          "id": "desarrollo_tecnologico_salud",
+          "nombre": "Desarrollo tecnológico del sector salud",
+          "descripcion": "Tecnología de investigación/proyecto científico + sector salud. Incluye dimensión regulatoria.",
+          "dimensiones_irl": [
+            "TRL",
+            "BRL",
+            "IPRL",
+            "MRL",
+            "FRL",
+            "TERL",
+            "RRL"
+          ]
+        },
+        {
+          "id": "adaptacion_tecnologica",
+          "nombre": "Adaptación tecnológica",
+          "descripcion": "Adoptan/adaptan tecnología para fortalecer el emprendimiento (sin TRL propio de I+D).",
+          "dimensiones_irl": [
+            "BRL",
+            "IPRL",
+            "MRL",
+            "FRL",
+            "TERL"
+          ]
+        }
+      ]
+    },
+    {
+      "paso": 4,
+      "id": "score_deeptech",
+      "nombre": "Cálculo del score DeepTech",
+      "descripcion": "Ponderación por bloques: Equipo de trabajo, Modelo de negocio, Innovación/Tecnología.",
+      "bloques_ref": "ver score_deeptech.bloques"
+    },
+    {
+      "paso": 5,
+      "id": "diagnostico_irl",
+      "nombre": "Medición de niveles de madurez (KTH IRL)",
+      "descripcion": "Gráfico de diagnóstico con puntos principales a desarrollar. Análisis y contraste con IA entre autoevaluación y evidencia del formulario.",
+      "dimensiones_disponibles": [
+        {
+          "codigo": "TRL",
+          "nombre": "Technology Readiness Level"
+        },
+        {
+          "codigo": "BRL",
+          "nombre": "Business Readiness Level"
+        },
+        {
+          "codigo": "IPRL",
+          "nombre": "Intellectual Property Readiness Level"
+        },
+        {
+          "codigo": "MRL",
+          "nombre": "Market Readiness Level"
+        },
+        {
+          "codigo": "RRL",
+          "nombre": "Regulatory Readiness Level",
+          "solo_salud": true
+        },
+        {
+          "codigo": "FRL",
+          "nombre": "Financial Readiness Level"
+        },
+        {
+          "codigo": "TERL",
+          "nombre": "Team Building Readiness Level"
+        }
+      ]
+    },
+    {
+      "paso": 6,
+      "id": "analisis_ia",
+      "nombre": "Análisis y contraste con IA",
+      "descripcion": "La IA contrasta texto libre (problema, propuesta de valor, tecnología, competencia, innovación) con niveles declarados y con conocimiento externo.",
+      "campos_con_ia": [
+        "problema_u_oportunidad",
+        "desarrollo_tecnologico",
+        "propuesta_de_valor",
+        "prototipos_productos",
+        "diferencial",
+        "competencia",
+        "innovacion",
+        "madurez_tecnologica",
+        "niveles_irl"
+      ]
+    },
+    {
+      "paso": 7,
+      "id": "resultado",
+      "nombre": "Resultado: selección + diagnóstico",
+      "descripcion": "Score ponderado, perfil IRL, brechas prioritarias y recomendaciones de desarrollo."
+    }
+  ],
+  "diagrama_mermaid": "flowchart TD\n    A[Postulación del líder] --> B{Filtros de entrada}\n    B -->|Descarta| X[No apto / Cierre]\n    B -->|Apto| C{Tipo de postulación}\n    C -->|Desarrollo tecnológico| D1[IRL: TRL BRL IPRL MRL FRL TERL]\n    C -->|Sector salud| D2[IRL: TRL BRL IPRL MRL FRL TERL + RRL]\n    C -->|Adaptación tecnológica| D3[IRL: BRL IPRL MRL FRL TERL]\n    D1 --> E[Score DeepTech ponderado]\n    D2 --> E\n    D3 --> E\n    E --> F[Diagnóstico de madurez + gráfico]\n    F --> G[Análisis y contraste con IA]\n    G --> H[Resultado: selección + brechas + recomendaciones]\n"
+}

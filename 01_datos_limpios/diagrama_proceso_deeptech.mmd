@@ -1,0 +1,13 @@
+flowchart TD
+    A[Postulación del líder] --> B{Filtros de entrada}
+    B -->|Descarta| X[No apto / Cierre]
+    B -->|Apto| C{Tipo de postulación}
+    C -->|Desarrollo tecnológico| D1[IRL: TRL BRL IPRL MRL FRL TERL]
+    C -->|Sector salud| D2[IRL: TRL BRL IPRL MRL FRL TERL + RRL]
+    C -->|Adaptación tecnológica| D3[IRL: BRL IPRL MRL FRL TERL]
+    D1 --> E[Score DeepTech ponderado]
+    D2 --> E
+    D3 --> E
+    E --> F[Diagnóstico de madurez + gráfico]
+    F --> G[Análisis y contraste con IA]
+    G --> H[Resultado: selección + brechas + recomendaciones]

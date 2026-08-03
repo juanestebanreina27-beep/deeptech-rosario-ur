@@ -1,0 +1,879 @@
+{
+  "titulo": "Formulario de postulación — Proceso de transferencia hacia el desarrollo de DeepTechs",
+  "institucion": "Universidad del Rosario",
+  "secciones": [
+    {
+      "id": "1",
+      "nombre": "1. DATOS DE CONTACTO / EQUIPO DE TRABAJO",
+      "variables": [
+        {
+          "id": 1,
+          "clave": "NOMBRE_LÍDER",
+          "nombre": "NOMBRE LÍDER",
+          "descripcion": "Nombre del líder responsable de participar en\n el programa de emprendimento",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 2,
+          "clave": "CORREO_ELECTRONICO_(PREFERIBLEMENTE_LABORAL)",
+          "nombre": "CORREO ELECTRONICO  (PREFERIBLEMENTE LABORAL)",
+          "descripcion": "Correo electronico principal del líder\n responsable para participar en el programa de emprendimiento",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 3,
+          "clave": "CÉDULA",
+          "nombre": "CÉDULA",
+          "descripcion": "Cédula de líder responsable de participar \nen el programa",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 4,
+          "clave": "CELULAR",
+          "nombre": "CELULAR",
+          "descripcion": "Celular del líder responsable en participar \nen el programa",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 5,
+          "clave": "CARGO_/_ROL_EMPRENDIMIENTO",
+          "nombre": "CARGO / ROL EMPRENDIMIENTO",
+          "descripcion": "Cargo o rol del líder responsable en la gestión\ndel emprendimiento",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 6,
+          "clave": "FACULTAD_/_UNIDAD_ACADEMICA",
+          "nombre": "FACULTAD / UNIDAD ACADEMICA",
+          "descripcion": "Facultad con la que el postulante tiene el vinculo",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 7,
+          "clave": "NIVEL_EDUCATIVO",
+          "nombre": "NIVEL EDUCATIVO",
+          "descripcion": "Describa el nivel edicativo que ha alcanzado y qe esta certificado por las autorides de educación del pais.",
+          "niveles": [
+            {
+              "etiqueta": "SIN EDUCACIÓN",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "EDUCACIÓN BÁSICA",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "EDUCACIÓN SECUNDARIA",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "PROFESIONAL",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "POSTGRADO",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "DOCTORADO",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 8,
+          "clave": "GRUPO_INVESTIGACIÓN",
+          "nombre": "GRUPO INVESTIGACIÓN",
+          "descripcion": "Grupo de investigación al que pertenece el líder\n responsable de participar en el programa de emprendimiento. Indicar el nombre del grupo de investigación y la categoría",
+          "niveles": [
+            {
+              "etiqueta": "No pertenece a grupo de Investigación",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "Pertenece a grupos de investigaciòn categoria A1",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "Pertenece a grupos de investigación categoria A",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "Pertenece a grupos de investigación categoria B",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "Pertenece a grupos de investigación categoria C",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 9,
+          "clave": "ROL_/_CARGO_/_VINCULO_UNIVERSIDAD",
+          "nombre": "ROL / CARGO / VINCULO UNIVERSIDAD",
+          "descripcion": "Rol o cargo del postulante dentro de la universidad",
+          "niveles": [
+            {
+              "etiqueta": "Líder NO viculado a la Universidad",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "Líder vinculado a la Universidad temporal o servicios",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "Lider vinculado a la universidad fijo o indefinido 5",
+              "puntaje": null
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 10,
+          "clave": "CONFORMACIÓN_EQUIPO_DE_TRABAJO_Y_ROL",
+          "nombre": "CONFORMACIÓN EQUIPO DE TRABAJO Y ROL",
+          "descripcion": "Descripción del equipo de trabajo comprometido\n con el desarrollo del emprendimiento, profesiones , roles y responsabilidades dentro del emprendimiento",
+          "niveles": [
+            {
+              "etiqueta": "Equipo conformado por 1 persona",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "Equipo conformado por 2 o más",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 11,
+          "clave": "EXPERIENCIA_PROFESIONAL_Y_LABORAL_EN_EL_SECTOR",
+          "nombre": "EXPERIENCIA PROFESIONAL Y LABORAL EN EL SECTOR",
+          "descripcion": "Describa los años de experiencia profesional y laboral del líder responsable del emprendimiento. Años de experiencia, roles o cargos desempeñados. Describa si el lider del emprendimiento ha desarrollado otros emprendimientos",
+          "niveles": [
+            {
+              "etiqueta": "El líder emprendedor tiene menos de 5 años de experiencia profesional / laboral",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "El líder emprendedor tiene entre 5 años y 10 años de experiencia profesional laboral y ha ocupado roles directivos",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El líder emprendedor tiene más de 10 años de experiencia profesional, ha ocupado cargos relevantes y ha desarrollado otros negocios o emprendimientos",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 12,
+          "clave": "DEDICACIÓN_DE_TIEMPO",
+          "nombre": "DEDICACIÓN DE TIEMPO",
+          "descripcion": "Describa el porcentaje de dedicación de tiempo al mes de cada uno de los integrantes líderes del resultado de investigación",
+          "niveles": [
+            {
+              "etiqueta": "El porcentaje de dedicación del tiempo del equipo líder es entre el 5% y 10% de su tiempo productivo",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El porcentaje de dedicación de tiempo del equipo líder es entre el 10% y el30%",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "El porcentaje de dedicación de tiempo del equipo líder es mayor al 30%",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "2. MODELO DE NEGOCIO DEL FUTURO EMPRENDIMIENTO",
+      "variables": [
+        {
+          "id": 1,
+          "clave": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+          "nombre": "Problema u oportunidad a resolver",
+          "descripcion": "Describa el problema que el emprendimiento\n pretende solucionar. Describa los hechos, las causas, las consecuencias y los impactos. Soporte el problema con hechos, datos, estadisticas, investigaciones y en general evidencia comprobable. Describa si este problema se presenta solo en su región o en otras regiones u otros paises. Sustente y argumente el problema u oportunidad.",
+          "niveles": [
+            {
+              "etiqueta": "Problema que tiene amplias soluciones actuales",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "El problema lo soluciona los dolientes de formas alternativas sin esfuerzo y/o se presenta localmente",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "El problema se soluciona con esfuerzo y dolor y/o se presenta localmente /Regionalmente",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El problema no tiene una solución efectiva y se presenta en varias regiones del país",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "El problema se presenta en varios países y no tiene solución efectiva actualmente",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANALISIS DE LA IA PARA \nDETERMINAR SI EL PROBLEMA YA ESTA SOLUCIONADO Y COMO"
+          }
+        },
+        {
+          "id": 2,
+          "clave": "DESARROLLO_TECNOLOGICO_O_RESULTADO_DE_INVESTIGACIÓN_QUE_SERÁ_LA_BASE_DEL_FUTURO_EMPRENDIMIENTO",
+          "nombre": "Desarrollo tecnologico o resultado de investigación que será la base del futuro emprendimiento",
+          "descripcion": "Describa con detaller técnicos y sustentado en datos, estadistifas y fuentes su desarrollo tecnológico o su resultado de investigación que es la base del futuro emprendimiento",
+          "niveles": [
+            {
+              "etiqueta": "El desarrollo tecnologico es similar a otros creados en otras universidades locales",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "El desarrollo tecnologico tiene ventajas que s traducen en beneficios frente a otros desarrollos similares existentes nacional o internacionalmente",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El desarrollo tecnologico es significativamente diferente y superior en ventajas y beneficios frente a soluciones similares o no tiene soluciones similares",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANÁLISIS CON IA DE TECNOLOGÍAS SIMILARES."
+          }
+        },
+        {
+          "id": 3,
+          "clave": "PROPUESTA_DE_VALOR_DEL_FUTURO_EMPRENDIMIENTO",
+          "nombre": "Propuesta de valor del futuro emprendimiento",
+          "descripcion": "Describa la propuesta de valor del emprendimiento.\n Describa las caracteristicas y en que se basan o sustentan las caracteristicas y componentes de la propuesta de valor",
+          "niveles": [
+            {
+              "etiqueta": "La propuesta de valor es generica, no esta sustentada y no esta articulada",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "La propuesta de valor sus caracteristicas y componentes son similares a lo existente en el mercado",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "La propuesta de valor sus caracteristicas y componente son diferentes a lo existente en el mercado y estan sustentadas / argumentada e integradas",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "La propuesta de valor es sustancialmente diferente a lo existente y esta solidamente fundamentada e integrada",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANALISIS DE LA IA PARA \nDETERMINAR SI LA PROPUESTA DE VALOR ES DIFERENTE Y RELEVANTE DE LO EXISTENTE EN EL MERCADO"
+          }
+        },
+        {
+          "id": 4,
+          "clave": "PROTOTIPOS_/_PRODUCTOS_O_SERVICIOS_EN_DESARROLLO",
+          "nombre": "Prototipos / Productos o servicios en desarrollo",
+          "descripcion": "Describa detalladamente si tiene prototipos, \nproductos y /o servicios y sus niveles de desarrollo.",
+          "niveles": [
+            {
+              "etiqueta": "Idea o concepto téorico",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "Prototipo sin validar",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "Prototipo en proceso de validación",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "Producto o servicio validado en el mercado",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "Producto / servicio con ventas frecuentes",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": true,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANÁLISIS CON IA DE PRODUCTOS O SERVICIOS SIMILARES."
+          }
+        },
+        {
+          "id": 5,
+          "clave": "DIFERENCIAL_O_FACTOR_DE_PREFERENCIA_Y_RELEVANCIA",
+          "nombre": "Diferencial o factor de preferencia y relevancia",
+          "descripcion": "Descripción del factor o variables que hacen\n quesu desarrollo tecnológico, prototipo, desarrollo sea diferente a lo existente y cuyas caracteristicas generan preferencia, y relevancia frente a lo existente. Sustente el diferencial o diferenciales con base en evidencia e investigaciones de la competencia o de analisis de la industria o el sector.",
+          "niveles": [
+            {
+              "etiqueta": "No se identifican diferenciales frente propuestas similares",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "Los diferenciales estan sustentados pero no generan relevancia ni preferencia",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "Los diferenciales estan sustentados y generan relevancia y preferencia",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 6,
+          "clave": "MERCADO_O_INDUSTRIA_AL_QUE_PERTENECE_EL_EMPRENDIMIENTO",
+          "nombre": "Mercado o industria al que pertenece el  emprendimiento",
+          "descripcion": "Describa el mercado, industria o sector al cual pertenece\n el emprendimiento. Describa las principales caracteristicas, actores, oportunidades, desafío y barreras que tiene la industria o mercado. Sistente la descripción con cifras e investigaciones actualizadas.",
+          "niveles": [],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": true
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 7,
+          "clave": "COMPETENCIA:_ANÁLISIS_DE_COMPETIDORES_DIRECTOS_E_INDIRECTOS",
+          "nombre": "Competencia: Análisis de competidores directos  e indirectos",
+          "descripcion": "Describa la competencia, tanto directa como indirecta de\n los productos / servicios del emprendimiento. También de la propuesta de valor. Describa con nombres y datos concretos los principales competidores y sus productos / servicios asociados.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento tiene muchos competidores y sus propuesta de valor, productos o servicios son superiores a los del emprendimiento",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "El emprendimiento tiene competidores y sus propuestas de valor, productos, servicios son similares a los del emprendimiento",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El emprendimiento tiene pocos competidores y la propuesta de valor, productos y servicios son menos potentes que los del emprendimiento",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "El emprendimiento no tiene competidores o tiene algunos competidores indirectos y su propuesta de valor, productos y servicios son necesarios en el mercado",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANÁLISIS CON IA DE \nLOS COMPETIDORES FRENTE A LA SOLUCIÓN QUE SE ESTA POSTILANDO"
+          }
+        },
+        {
+          "id": 8,
+          "clave": "ALIADOS_/_PROVEEDORES",
+          "nombre": "Aliados / proveedores",
+          "descripcion": "Describa los aliados, proveedores, socios,\nfinanciadores del emprendimiento. Describa cuantos aliados se tiene y concretamente quienes son.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento no tiene aliados",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "El emprendimiento tiene pocos aliados, no tan relevantes o reconocidos",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El emprendimiento tiene los aliados suficientes y son relevantes o reconocidos",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANÁLISIS CON IA"
+          }
+        },
+        {
+          "id": 9,
+          "clave": "NÚMERO_DE_CLIENTES_FRECUENTES_Y_NOMBRES",
+          "nombre": "Número de clientes frecuentes y nombres",
+          "descripcion": "Describa cuantos clientes frecuentes, recurrentes tiene\n el emprendimiento y cuales son los clientes concretamente. Describa si tiene contratos recurrentes y de que magnitud (plazo, monto).",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento no tiene clientes frecuentes",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "El emprendimiento si tiene clientes frecuentes",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El emprendimiento tiene clientes fidelizados con contratos recurrentes",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 10,
+          "clave": "VENTAS_PROMEDIO_MENSUALES",
+          "nombre": "Ventas promedio mensuales",
+          "descripcion": "Informe las ventas promedio mensuales del\n emprendimiento. Estos datos deben ser fiel a la realidad.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento NO tiene ventas",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El emprendimiento tiene ventas recurrentes",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 11,
+          "clave": "ESTRATEGIA_DE_PROPIEDAD_INTELECTUAL",
+          "nombre": "Estrategia de propiedad intelectual",
+          "descripcion": "Describa si el emprendimiento ha desarrollado una\n estrategia de propiedad intelectual, si tiene activos en proceso de protección o protegidos",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento No tiene estrategia ni conocimiento de propiedad intelectual",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "El emprendimiento si tiene estrategia y/o conocimiento de propiedad intelectual",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 12,
+          "clave": "GESTIÓN_FINANCIERA",
+          "nombre": "Gestión financiera",
+          "descripcion": "Describa cómo el emprendimiento gestiona sus finanzas,\n si conoce fuentes de financiación adecuadas para el negocio, si usa o aplica a las fuentes de recursos o convocatorias de apoyo a emprendimientos o desarrollo de tecnologías.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento no conocer las fuentes de financiamiento ni ha gestionado recursos financieros",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "El emprendimiento SI conoce las fuentes de financiemiento y ha gestionado recursos financieros",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 13,
+          "clave": "GESTIÓN_DE_INVERSIONES",
+          "nombre": "Gestión de inversiones",
+          "descripcion": "Describa si el emprendimiento ha gestionado inversiones\n y cómo las ha gestionado, con que fondos, con que entidades.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento no conoce las fuentes de inversión ni ha gestionado fuentes de inversión",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El emprendimiento si conoce las fuentes de inversión y si las ha gestionado inversiones",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "3. INNOVACIÓN / TECNOLOGÍA",
+      "variables": [
+        {
+          "id": 1,
+          "clave": "INNOVACIÓN",
+          "nombre": "Innovación",
+          "descripcion": "Describa detalladamente si su futor emprendimiento genera innovaciones. Justifique con evidencia (real) por que es una innovación",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento no contiene o desarrolla innovaciones",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "El emprendimiento contiene o desarrolla innovaciones",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANALIZAR CON IA \nLA DESCRPCIÓN DE INNOVACIONES FRENTE A LO EXISTENTE."
+          }
+        },
+        {
+          "id": 2,
+          "clave": "TIPO_DE_INNOVACIÓN",
+          "nombre": "Tipo de innovación",
+          "descripcion": "Si el proyecto de emprendimiento genera innovación\n, describir que tipo de innovación ha generado o esta generando",
+          "niveles": [
+            {
+              "etiqueta": "Innovación de modelo de negocio, de producto, de servicio, de proceso, organizacional, de marketing, social, tecnologica.",
+              "puntaje": null
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 3,
+          "clave": "GRADO_DE_INNOVACIÓN",
+          "nombre": "Grado de innovación",
+          "descripcion": "Si genera innovación, describa el grado de innovación que esta desarrollando para o dentro \nde su emprendimiento, justifique por que esta en ese grado con ejemplos de la competencia directa o indirecta.",
+          "niveles": [
+            {
+              "etiqueta": "La innovación corresponde a una mejora continua",
+              "puntaje": 1
+            },
+            {
+              "etiqueta": "La innovación corresponde a un grado incremental",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "La innovación corresponde a un grado radical",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "La innovación corresponde a un grado disruptivo",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": false,
+            "opcional": true,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        },
+        {
+          "id": 4,
+          "clave": "NIVEL_DE_MADUREZ_O_DESARROLLO_DE_TECNOLOGÍA_/_DESARROLLO_DE_INVESTIGACIÓN_CIENTÍFICA",
+          "nombre": "Nivel de madurez o desarrollo de tecnología / desarrollo de investigación científica",
+          "descripcion": "Describa el nivel de madurez o desarrollo de su tecnología o resultado de investigación con respecto a que nivel de alistamiento tiene para ser usada o comercializada",
+          "niveles": [
+            {
+              "etiqueta": "El desarrollo tecnologico esta en validaciones y pruebas en entornos relevantes",
+              "puntaje": 3
+            },
+            {
+              "etiqueta": "El desarrollo tecnologico ya supero las validaciones con clientes o usuarios y tuvo sus ajustes",
+              "puntaje": 4
+            },
+            {
+              "etiqueta": "El desarrollo tecnologico ya esta en el mercado y tiene usuarios, clienrtes o beneficiarios",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": true,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": true,
+            "instruccion": "ANÁLISIS CON IA DE TECNOLOGÍAS SIMILARES."
+          }
+        },
+        {
+          "id": 5,
+          "clave": "ADOPCIÓN_DE_TECNOLOGÍA",
+          "nombre": "Adopción de tecnología",
+          "descripcion": "Describa si el emprendimiento adopta tecnología ya desarrollada y\n cual es la tecnología o tecnologías que esta adaptando para fortalecer el emprendimiento.",
+          "niveles": [
+            {
+              "etiqueta": "El emprendimiento NO adopta ninguna tecnología (ni tradicional ni de punta)",
+              "puntaje": 0
+            },
+            {
+              "etiqueta": "El emprendimiento adopta tecnología tradicional o de amplio uso",
+              "puntaje": 2
+            },
+            {
+              "etiqueta": "El emprendimiento adopta tecnología 4,0 ó ACTI",
+              "puntaje": 5
+            }
+          ],
+          "tipo_entrada": {
+            "obligatorio": true,
+            "opcional": false,
+            "requiere_descripcion_texto": false,
+            "permite_cargar_archivo": false,
+            "listado_seleccion": false
+          },
+          "analisis_ia": {
+            "activo": false,
+            "instruccion": null
+          }
+        }
+      ]
+    }
+  ]
+}

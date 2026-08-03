@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Proceso selección DeepTech — U. Rosario</title>
+<style>
+  :root {
+    --rojo: #C8102E;
+    --rojo-oscuro: #9a0c24;
+    --gris: #2b2b2b;
+    --gris-claro: #f4f4f5;
+    --borde: #e5e5e5;
+    --ok: #0f766e;
+    --warn: #b45309;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    margin: 0; padding: 32px;
+    background: #fff; color: var(--gris);
+  }
+  h1 {
+    color: var(--rojo);
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+  }
+  .sub { color: #666; margin-bottom: 28px; font-size: 0.95rem; }
+  .flow {
+    display: flex; flex-direction: column; gap: 12px; max-width: 920px;
+  }
+  .step {
+    border: 1px solid var(--borde);
+    border-left: 6px solid var(--rojo);
+    border-radius: 10px;
+    padding: 16px 18px;
+    background: var(--gris-claro);
+  }
+  .step h2 {
+    margin: 0 0 6px; font-size: 1.05rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .badge {
+    background: var(--rojo); color: #fff;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 700;
+  }
+  .step p { margin: 0; font-size: 0.92rem; line-height: 1.45; }
+  .arrow {
+    text-align: center; color: var(--rojo); font-size: 1.4rem; line-height: 1;
+  }
+  .grid3 {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;
+  }
+  .card {
+    background: #fff; border: 1px solid var(--borde); border-radius: 8px;
+    padding: 12px; font-size: 0.85rem;
+  }
+  .card strong { display: block; color: var(--rojo-oscuro); margin-bottom: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .tag {
+    background: #fee2e2; color: var(--rojo-oscuro);
+    padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+  }
+  .tag.extra { background: #fef3c7; color: var(--warn); }
+  ul.discard { margin: 8px 0 0; padding-left: 18px; font-size: 0.88rem; }
+  ul.discard li { margin-bottom: 4px; }
+  .result {
+    border-left-color: var(--ok);
+    background: #ecfdf5;
+  }
+  footer { margin-top: 28px; font-size: 0.8rem; color: #888; }
+  @media (max-width: 700px) {
+    .grid3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <h1>Proceso de selección y evaluación DeepTech</h1>
+  <p class="sub">Universidad del Rosario — Transferencia tecnológica hacia DeepTechs</p>
+
+  <div class="flow">
+    <div class="step">
+      <h2><span class="badge">1</span> Formulario de postulación</h2>
+      <p>Datos de equipo, modelo de negocio e innovación/tecnología. Incluye escalas de puntaje y campos con análisis de IA.</p>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="step">
+      <h2><span class="badge">2</span> Filtros de entrada (descarte)</h2>
+      <p>Si se cumple <strong>alguna</strong> condición, la postulación no avanza:</p>
+      <ul class="discard">
+        <li>Sin vínculo con la universidad</li>
+        <li>Solo ideas/conceptos (sin prototipo ni PMV)</li>
+        <li>Más de 3 años con operación comercial</li>
+        <li>Sin desarrollo ni adaptación tecnológica que soporte el emprendimiento</li>
+      </ul>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="step">
+      <h2><span class="badge">3</span> Tipo de postulación → dimensiones KTH IRL</h2>
+      <div class="grid3">
+        <div class="card">
+          <strong>Desarrollo tecnológico</strong>
+          Tecnología de investigación o proyecto científico
+          <div class="tags">
+            <span class="tag">TRL</span><span class="tag">BRL</span><span class="tag">IPRL</span>
+            <span class="tag">MRL</span><span class="tag">FRL</span><span class="tag">TERL</span>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Sector salud</strong>
+          Desarrollo tecnológico + salud (incluye regulación)
+          <div class="tags">
+            <span class="tag">TRL</span><span class="tag">BRL</span><span class="tag">IPRL</span>
+            <span class="tag">MRL</span><span class="tag">FRL</span><span class="tag">TERL</span>
+            <span class="tag extra">RRL</span>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Adaptación tecnológica</strong>
+          Adopta/adapta tecnología (sin TRL de I+D propio)
+          <div class="tags">
+            <span class="tag">BRL</span><span class="tag">IPRL</span><span class="tag">MRL</span>
+            <span class="tag">FRL</span><span class="tag">TERL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="step">
+      <h2><span class="badge">4</span> Score DeepTech ponderado</h2>
+      <p>Bloques: <strong>Equipo</strong> (nivel educativo 25%, experiencia 20%, grupo 20%, vínculo 20%, conformación 10%, dedicación 5%) · <strong>Modelo de negocio</strong> · <strong>Innovación / Tecnología</strong>.</p>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="step">
+      <h2><span class="badge">5</span> Diagnóstico de madurez + contraste IA</h2>
+      <p>Gráfico IRL, puntos prioritarios a desarrollar y contraste entre autoevaluación y evidencia del formulario (problema, valor, tecnología, competencia, innovación).</p>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="step result">
+      <h2><span class="badge">6</span> Resultado</h2>
+      <p>Score, perfil de madurez, brechas y recomendaciones para el programa de transferencia DeepTech.</p>
+    </div>
+  </div>
+
+  <footer>Generado para consumo por IA y documentación del proyecto · datos_ia/</footer>
+</body>
+</html>

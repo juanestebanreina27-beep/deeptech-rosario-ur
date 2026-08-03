@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "proyecto": "DeepTech Universidad del Rosario",
+    "descripcion": "Listas desplegables para formulario de postulación",
+    "fuente": "Brief de planeación Parte A.5"
+  },
+  "facultades_escuelas": [
+    { "id": 1, "nombre": "Escuela de Administración" },
+    { "id": 2, "nombre": "Escuela de Ciencias Humanas" },
+    { "id": 3, "nombre": "Escuela de Ciencias e Ingeniería" },
+    { "id": 4, "nombre": "Escuela de Medicina y Ciencias de la Salud" },
+    { "id": 5, "nombre": "Facultad de Creación" },
+    { "id": 6, "nombre": "Facultad de Economía" },
+    { "id": 7, "nombre": "Facultad de Estudios Internacionales, Políticos y Urbanos" },
+    { "id": 8, "nombre": "Facultad de Jurisprudencia" },
+    { "id": 9, "nombre": "Otra / Interdisciplinar (especificar)", "requiere_texto_libre": true }
+  ],
+  "sectores_economicos": [
+    { "id": 1, "nombre": "Salud y ciencias de la vida (biotecnología, medtech, farma)", "ciiu": ["Q", "C21"], "implica_posible_rrl": true },
+    { "id": 2, "nombre": "Agroindustria y agrotecnología", "ciiu": ["A"] },
+    { "id": 3, "nombre": "Energía y sostenibilidad", "ciiu": ["D"] },
+    { "id": 4, "nombre": "Medio ambiente y economía circular", "ciiu": ["E"] },
+    { "id": 5, "nombre": "Nuevos materiales y manufactura avanzada", "ciiu": ["C"] },
+    { "id": 6, "nombre": "Industria 4.0, robótica y automatización", "ciiu": ["C", "M"] },
+    { "id": 7, "nombre": "Tecnologías de la información, software e IA", "ciiu": ["J"] },
+    { "id": 8, "nombre": "Electrónica, hardware y dispositivos", "ciiu": ["C26", "C27"] },
+    { "id": 9, "nombre": "Aeroespacial, defensa y nuevas movilidades", "ciiu": ["C30"] },
+    { "id": 10, "nombre": "Fintech y servicios financieros", "ciiu": ["K"] },
+    { "id": 11, "nombre": "Edtech y capital humano", "ciiu": ["P"] },
+    { "id": 12, "nombre": "Industrias creativas y culturales (economía naranja)", "ciiu": ["R"] },
+    { "id": 13, "nombre": "Construcción, infraestructura y proptech", "ciiu": ["F", "L"] },
+    { "id": 14, "nombre": "Minería y recursos naturales", "ciiu": ["B"] },
+    { "id": 15, "nombre": "Comercio, logística y cadena de suministro", "ciiu": ["G", "H"] },
+    { "id": 16, "nombre": "Turismo y servicios de experiencia", "ciiu": ["I"] },
+    { "id": 17, "nombre": "Otro sector (especificar)", "ciiu": [], "requiere_texto_libre": true }
+  ]
+}

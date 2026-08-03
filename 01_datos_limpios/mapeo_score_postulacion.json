@@ -1,0 +1,221 @@
+{
+  "rules_version": "motor_v1",
+  "formula": {
+    "por_variable": "norm = points/max; contrib = norm * peso_efectivo",
+    "opcionales_vacias": "omitir y renormalizar pesos del bloque",
+    "total": "promedio simple de score_bloque no nulos (1/3 cada uno)"
+  },
+  "variables": [
+    {
+      "variable_key": "nivel_educativo",
+      "score_clave_excel": "NIVEL_EDUCATIVO",
+      "postulacion_clave_excel": "NIVEL_EDUCATIVO",
+      "bloque": "EQUIPO",
+      "peso": 0.25,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "conformacion_equipo",
+      "score_clave_excel": "CONFORMACIÓN_EQUIPO_DE_TRABAJO",
+      "postulacion_clave_excel": "CONFORMACIÓN_EQUIPO_DE_TRABAJO_Y_ROL",
+      "bloque": "EQUIPO",
+      "peso": 0.1,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "experiencia_profesional",
+      "score_clave_excel": "EXPERIENCIA_PROFESIONAL_Y_LABORAL",
+      "postulacion_clave_excel": "EXPERIENCIA_PROFESIONAL_Y_LABORAL_EN_EL_SECTOR",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "grupo_investigacion",
+      "score_clave_excel": "GRUPO_DE_INVESTIGACIÓN",
+      "postulacion_clave_excel": "GRUPO_INVESTIGACIÓN",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "dedicacion_tiempo",
+      "score_clave_excel": "DEDICACIÓN_DE_TIEMPO",
+      "postulacion_clave_excel": "DEDICACIÓN_DE_TIEMPO",
+      "bloque": "EQUIPO",
+      "peso": 0.05,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "vinculo_universidad",
+      "score_clave_excel": "VINCULO_CON_LA_UNIVERSIDAD",
+      "postulacion_clave_excel": "ROL_/_CARGO_/_VINCULO_UNIVERSIDAD",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5,
+      "correccion": "nivel fijo/indefinido = 5 (no null)"
+    },
+    {
+      "variable_key": "problema_oportunidad",
+      "score_clave_excel": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+      "postulacion_clave_excel": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "propuesta_valor",
+      "score_clave_excel": "PROPUESTA_DE_VALOR_(INNOVADORA)",
+      "postulacion_clave_excel": "PROPUESTA_DE_VALOR_DEL_FUTURO_EMPRENDIMIENTO",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "desarrollo_tecnologico",
+      "score_clave_excel": "DESARROLLO_TECNOLOGICO_/_RESULTADO_INVESTIGACIÓN",
+      "postulacion_clave_excel": "DESARROLLO_TECNOLOGICO_O_RESULTADO_DE_INVESTIGACIÓN_QUE_SERÁ_LA_BASE_DEL_FUTURO_EMPRENDIMIENTO",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "prototipos",
+      "score_clave_excel": "PROTOTIPOS_/_PRODUCTOS_/_SERVICIOS",
+      "postulacion_clave_excel": "PROTOTIPOS_/_PRODUCTOS_O_SERVICIOS_EN_DESARROLLO",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "diferencial",
+      "score_clave_excel": "DIFERENCIAL_CON_EVIDENCIAS_(INNOVACIÓN)",
+      "postulacion_clave_excel": "DIFERENCIAL_O_FACTOR_DE_PREFERENCIA_Y_RELEVANCIA",
+      "bloque": "MODELO",
+      "peso": 0.11,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "competencia",
+      "score_clave_excel": "ANÁLISIS_COMPETENCIA",
+      "postulacion_clave_excel": "COMPETENCIA:_ANÁLISIS_DE_COMPETIDORES_DIRECTOS_E_INDIRECTOS",
+      "bloque": "MODELO",
+      "peso": 0.03,
+      "obligatorio": false,
+      "max_points": 5
+    },
+    {
+      "variable_key": "aliados",
+      "score_clave_excel": "ALIADOS",
+      "postulacion_clave_excel": "ALIADOS_/_PROVEEDORES",
+      "bloque": "MODELO",
+      "peso": 0.02,
+      "obligatorio": false,
+      "max_points": 5
+    },
+    {
+      "variable_key": "estrategia_pi",
+      "score_clave_excel": "ESTRATEGIA_PROPIEDAD_INTELECTUAL",
+      "postulacion_clave_excel": "ESTRATEGIA_DE_PROPIEDAD_INTELECTUAL",
+      "bloque": "MODELO",
+      "peso": 0.02,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "gestion_financiera",
+      "score_clave_excel": "GESTIÓN_FINANCIERA",
+      "postulacion_clave_excel": "GESTIÓN_FINANCIERA",
+      "bloque": "MODELO",
+      "peso": 0.01,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "gestion_inversiones",
+      "score_clave_excel": "GESTIÓN_DE_INVERSIONES",
+      "postulacion_clave_excel": "GESTIÓN_DE_INVERSIONES",
+      "bloque": "MODELO",
+      "peso": 0.01,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "innovacion",
+      "score_clave_excel": "INNOVACIÓN",
+      "postulacion_clave_excel": "INNOVACIÓN",
+      "bloque": "INNOVACION",
+      "peso": 0.15,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "grado_innovacion",
+      "score_clave_excel": "GRADO_DE_INNOVACIÓN",
+      "postulacion_clave_excel": "GRADO_DE_INNOVACIÓN",
+      "bloque": "INNOVACION",
+      "peso": 0.35,
+      "obligatorio": false,
+      "max_points": 5
+    },
+    {
+      "variable_key": "madurez_tecnologica",
+      "score_clave_excel": "MADUREZ_DEL_DESARROLLO_TECNOLOGICO_(_INVESTIGACIÓN_CIENTÍFICA)",
+      "postulacion_clave_excel": "NIVEL_DE_MADUREZ_O_DESARROLLO_DE_TECNOLOGÍA_/_DESARROLLO_DE_INVESTIGACIÓN_CIENTÍFICA",
+      "bloque": "INNOVACION",
+      "peso": 0.3,
+      "obligatorio": true,
+      "max_points": 5
+    },
+    {
+      "variable_key": "adopcion_tecnologia",
+      "score_clave_excel": "ADOPCIÓN_DE_TECNOLOGÍA",
+      "postulacion_clave_excel": "ADOPCIÓN_DE_TECNOLOGÍA",
+      "bloque": "INNOVACION",
+      "peso": 0.2,
+      "obligatorio": true,
+      "max_points": 5
+    }
+  ],
+  "campos_producto_adicionales": [
+    {
+      "variable_key": "tipo_postulacion",
+      "tipo": "enum",
+      "valores": [
+        "desarrollo_tecnologico",
+        "desarrollo_tecnologico_salud",
+        "adaptacion_tecnologica"
+      ],
+      "obligatorio": true
+    },
+    {
+      "variable_key": "anos_operacion_comercial",
+      "tipo": "number",
+      "obligatorio": true,
+      "descarte_si": "> 3"
+    },
+    {
+      "variable_key": "sector_id",
+      "tipo": "int",
+      "origen": "listas_desplegables.json",
+      "obligatorio": true
+    },
+    {
+      "variable_key": "facultad_id",
+      "tipo": "int",
+      "origen": "listas_desplegables.json",
+      "obligatorio": true
+    }
+  ]
+}

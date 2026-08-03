@@ -1,0 +1,244 @@
+{
+  "titulo": "Diagnóstico KTH Innovation Readiness Level (IRL)",
+  "subtitulo": "Complemento del diagnóstico de madurez de la futura DeepTech",
+  "descripcion": "Marco de madurez multi-dimensional para evaluar emprendimientos deeptech. Cada dimensión se autoevalúa y se contrasta con IA. El nivel seleccionado debe justificarse; la IA contrasta con el formulario.",
+  "fuente": "Adaptado de KTH Innovation Readiness Level",
+  "dimensiones": [
+    {
+      "codigo": "TRL",
+      "nombre": "Technology Readiness",
+      "nombre_completo": "TRL: Technology Readiness",
+      "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "Principios básicos observados. Conocimiento científico base que\n sustenta la idea de la solución"
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Concepto técnologico fomulado: Aplicaciónpotencial identificada pero\n sin datos empíricos"
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Prueba de concepto analitica o experimental. Primera evidencia de \nfactibilidad"
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Tecnología validada en laboratorio. Prototipo de baja fidelidad funcional\n en condiciones controladas"
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Tecnología validada en entorno relevante (simulado o semi real). \nPrototipo de media fidelidad"
+        },
+        {
+          "nivel": 6,
+          "descripcion": "Tecnología demostrada en entorno relevante: Pilotos con usuarios\n reales en condiciones controladas"
+        },
+        {
+          "nivel": 7,
+          "descripcion": "Prototipo en entorno operacional: Sistema de salud real, con limitaciones"
+        },
+        {
+          "nivel": 8,
+          "descripcion": "Sistema completo y calificado: La tecnología está lista para uso en \ncondiciones operacionales reales"
+        },
+        {
+          "nivel": 9,
+          "descripcion": "Tecnología operacional en su forma final. Comprobada en condiciones reales"
+        }
+      ]
+    },
+    {
+      "codigo": "BRL",
+      "nombre": "Business Readiness",
+      "nombre_completo": "BRL: Business Readiness",
+      "nota_evaluacion": "Contrastar las respuestas dadas en la sesión \nde modelo de negocio por el postulante con el nivel de madurez puesto por el postulante.",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "En diseño: El modelo de negocio esta en proceso de diseño\n o esta con una propuesta no validada, no hay claridad como se crea y se distribuye valor."
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Propuesta de valor: Existe una propuesta de valor articulada pero sin\n validación de clientes o beneficiarios reales."
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Modelo de negocio en validación: Modelo de negocio en proceso de \nvalidación de sus clientes, aliados, y las hipotesis de cada componente con plan de validación concreto"
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Modelo de negocio validado: Modelo de negocio con las validaciones\n y ajustes realizados"
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Modelo de negocio con tracción de ventas y en proceso de crecimiento"
+        },
+        {
+          "nivel": 6,
+          "descripcion": "Modelo de negocio escalable con evidencia de crecimiento sostenible\n y acceso a financiamiento"
+        },
+        {
+          "nivel": 7,
+          "descripcion": "Empresa autosostenible con un portafolio de clientes diversificado."
+        },
+        {
+          "nivel": 8,
+          "descripcion": "Empresa con trayectoria de crecimiento y desarrollo sostenible"
+        }
+      ]
+    },
+    {
+      "codigo": "IPRL",
+      "nombre": "Intelectual Property Readiness",
+      "nombre_completo": "IPRL: Intelectual Property Readiness",
+      "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "Sin conciencia de la propiedad intelectual: La tecnología, \nproducto o servicio no ha sido evaluada desde la perspectiva de la propiedad intelectual"
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Conciencia básica: El equipo conoce la importancia de la propiedad\n intelectual pero no tiene estrategia ni procesos formales o en desarrollo"
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Búsqueda de antecedentes: Análisis de estado del arte de la\n propiedad intelectual realizado. Sin solicitudes activas, sin estrategia"
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Diseño de la estrategia de PI y solicitudes activas: Estrategia de PI diseñada y \nsolicitud de patente, modelo de utilidad, secreto industrial, o derechos de autor en proceso."
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Protección vigente: PI concedida y activa, Estrategia de portafolio de PI en desarrollo"
+        },
+        {
+          "nivel": 6,
+          "descripcion": "Portafolio estratégico: Cartera de PI gestionada activamente como\n activo competitivo. Licencias y alianzas basadas en PI"
+        }
+      ]
+    },
+    {
+      "codigo": "MRL",
+      "nombre": "Market Readiness",
+      "nombre_completo": "MRL: Market Readiness",
+      "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "Mercado hipotético: El equipo no ha tendido contacto con potenciales\n usuarios, beneficiarios, futuros clientes (pagadores)."
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Mercado identificado: Se han realizado las primeras conversaciones con\n usuarios. Analisis de la competencia básico."
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Mercado validado con datos: Segmentación clara, canales de distribución\n identificados"
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Estrategia de mercado en ejecución: Canales validados, posicionamiento \ndifereciado y demostrado. Se conoce y analiza los competidores directos e indirectos"
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Liderazgo en el mercado demostrado: Referente en su categoría, \nexpansión en proceso a nuevos mercados"
+        }
+      ]
+    },
+    {
+      "codigo": "RRL",
+      "nombre": "Regulatory Readiness",
+      "nombre_completo": "RRL: Regulatory Readiness",
+      "nota_evaluacion": "Solo para postulaciones del\n sector salud. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "Sin análisis regulatorio: La tecnología / innovación no ha sido \nevaluada desde la perspectiva regulatoria."
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Clasificación realizada: La técnología / innovación ha sido clasificada\n por tipo de producto regulado (dispositivo, software..). Clasificación INVIMA / IMDRF / SAMD"
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Ruta regulatoria definida: Se conoce la ruta de aprobación aplicable\n (registro sanitario, notificación, permiso sanitario de funcionamiento) y los requisitos especificos. Estudips de desempeño /biocompatibilidad / validación clinica."
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Documentación en preparación: Se están compilando los estudios\n técnicos, clínicos y de calidad requeridos para la solicitud."
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Solicitud radicada: La solicitud de registro o permiso ha sido\n presentada ante el INVIMA y esta en evaluación. Radicación INVIMA activa."
+        },
+        {
+          "nivel": 6,
+          "descripcion": "Registro obtenido: La tecnología / innovación\n cuenta con el registro sanitario o autorización regulatoria vigente para operar en el mercado colombiano."
+        },
+        {
+          "nivel": 7,
+          "descripcion": "Expansión regional: Reconocimiento mutuo de registro en al \nmenos un país PANDRH"
+        }
+      ]
+    },
+    {
+      "codigo": "FRL",
+      "nombre": "Financial Readiness Level",
+      "nombre_completo": "FRL: Financial Readiness Level",
+      "nota_evaluacion": "El nivel seleccionado debe tener una casilla\n donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "Sin estrategia de financiamiento identificado. La tecnología o innovación\n se desarrolla con recursos propios o muy limitados."
+        },
+        {
+          "nivel": 2,
+          "descripcion": "Financiamiento semilla obtenido (subsidios, capital inicial). Runway\n menor a 12 meses"
+        },
+        {
+          "nivel": 3,
+          "descripcion": "Ronda de inversión completada (seed o serie A). Financiamiento para \nvalidación y primeras ventas"
+        },
+        {
+          "nivel": 4,
+          "descripcion": "Emprendimiento con financiamiento en crecimiento (serie B+) o con ingresos que cubren la operación y permiten escalar."
+        },
+        {
+          "nivel": 5,
+          "descripcion": "Empresa con crecimiento sostenido. Acceso a mercado de capitales o con\n estrategia de salida definida."
+        }
+      ]
+    },
+    {
+      "codigo": "TERL",
+      "nombre": "Team Building Readiness",
+      "nombre_completo": "TERL: Team Building Readiness",
+      "nota_evaluacion": "El nivel seleccionado debe tener una casilla\n donde se pida la justificación de ese nivel",
+      "niveles": [
+        {
+          "nivel": 1,
+          "descripcion": "El proyecto de emprendimento tiene un fundador, \nque esta desarrollando el proyecto en su totalidad, tienen varios roles y su remuneración no esta definida. Tiene ayudantes."
+        },
+        {
+          "nivel": 2,
+          "descripcion": "El equipo cuenta con dos o más fundadores / líderes y con una o dos\n personas de apoyo técnico o administrativo."
+        },
+        {
+          "nivel": 3,
+          "descripcion": "El equipo de trabajo tiene roles y responsabilidades definidas, así\n como asignaciones de remuneración definidas."
+        },
+        {
+          "nivel": 4,
+          "descripcion": "El equipo cuenta con roles, responsabilidades y metas asociadas \nnivel directivo (liderazgo), técnico, operativo y administrativo concretamente definidos y caracterizados. Tiene asignaciones salariales acordes con los cargos y responsabilidades. Hay un equipo que se complementa. La dedicación de tiempo es parcial o total."
+        },
+        {
+          "nivel": 5,
+          "descripcion": "El equipo cuenta con un equipo suficiente y compacto para sostener\n la operación y el crecimiento del emprendimiento, cuenta con politicas de desarrollo de talento humano, cargos definidos, curvas salariales. Cuenta con plan de beneficios y espacios de teambuilding. La dedicación de tiempo es total. Tienen consejos directivos o consultivos."
+        }
+      ]
+    }
+  ]
+}

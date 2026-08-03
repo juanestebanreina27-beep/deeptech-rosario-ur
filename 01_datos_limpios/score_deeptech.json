@@ -1,0 +1,129 @@
+{
+  "titulo": "Score de evaluación DeepTech U. Rosario",
+  "descripcion": "Pesos relativos por bloque para calcular score ponderado. Cada variable se puntúa según niveles de postulación y se multiplica por su peso.",
+  "bloques": [
+    {
+      "id": "EQUIPO_DE_TRABAJO",
+      "nombre": "EQUIPO DE TRABAJO",
+      "variables": [
+        {
+          "nombre": "NIVEL EDUCATIVO",
+          "clave": "NIVEL_EDUCATIVO",
+          "peso": 0.25
+        },
+        {
+          "nombre": "CONFORMACIÓN EQUIPO DE TRABAJO",
+          "clave": "CONFORMACIÓN_EQUIPO_DE_TRABAJO",
+          "peso": 0.1
+        },
+        {
+          "nombre": "EXPERIENCIA PROFESIONAL Y LABORAL",
+          "clave": "EXPERIENCIA_PROFESIONAL_Y_LABORAL",
+          "peso": 0.2
+        },
+        {
+          "nombre": "GRUPO DE INVESTIGACIÓN",
+          "clave": "GRUPO_DE_INVESTIGACIÓN",
+          "peso": 0.2
+        },
+        {
+          "nombre": "DEDICACIÓN DE TIEMPO",
+          "clave": "DEDICACIÓN_DE_TIEMPO",
+          "peso": 0.05
+        },
+        {
+          "nombre": "VINCULO CON LA UNIVERSIDAD",
+          "clave": "VINCULO_CON_LA_UNIVERSIDAD",
+          "peso": 0.2
+        }
+      ],
+      "peso_total": 1.0
+    },
+    {
+      "id": "MODELO_DE_NEGOCIO",
+      "nombre": "MODELO DE NEGOCIO",
+      "variables": [
+        {
+          "nombre": "PROBLEMA U OPORTUNIDAD A RESOLVER",
+          "clave": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+          "peso": 0.2
+        },
+        {
+          "nombre": "PROPUESTA DE VALOR (INNOVADORA)",
+          "clave": "PROPUESTA_DE_VALOR_(INNOVADORA)",
+          "peso": 0.2
+        },
+        {
+          "nombre": "DESARROLLO TECNOLOGICO / RESULTADO INVESTIGACIÓN",
+          "clave": "DESARROLLO_TECNOLOGICO_/_RESULTADO_INVESTIGACIÓN",
+          "peso": 0.2
+        },
+        {
+          "nombre": "PROTOTIPOS / PRODUCTOS / SERVICIOS",
+          "clave": "PROTOTIPOS_/_PRODUCTOS_/_SERVICIOS",
+          "peso": 0.2
+        },
+        {
+          "nombre": "DIFERENCIAL CON EVIDENCIAS (INNOVACIÓN)",
+          "clave": "DIFERENCIAL_CON_EVIDENCIAS_(INNOVACIÓN)",
+          "peso": 0.11
+        },
+        {
+          "nombre": "ANÁLISIS COMPETENCIA",
+          "clave": "ANÁLISIS_COMPETENCIA",
+          "peso": 0.03
+        },
+        {
+          "nombre": "ALIADOS",
+          "clave": "ALIADOS",
+          "peso": 0.02
+        },
+        {
+          "nombre": "ESTRATEGIA PROPIEDAD INTELECTUAL",
+          "clave": "ESTRATEGIA_PROPIEDAD_INTELECTUAL",
+          "peso": 0.02
+        },
+        {
+          "nombre": "GESTIÓN FINANCIERA",
+          "clave": "GESTIÓN_FINANCIERA",
+          "peso": 0.01
+        },
+        {
+          "nombre": "GESTIÓN DE INVERSIONES",
+          "clave": "GESTIÓN_DE_INVERSIONES",
+          "peso": 0.01
+        }
+      ],
+      "peso_total": 1.0
+    },
+    {
+      "id": "INNOVACI_N_TECNOLOG_A",
+      "nombre": "INNOVACIÓN / TECNOLOGÍA",
+      "variables": [
+        {
+          "nombre": "INNOVACIÓN",
+          "clave": "INNOVACIÓN",
+          "peso": 0.15
+        },
+        {
+          "nombre": "GRADO DE INNOVACIÓN",
+          "clave": "GRADO_DE_INNOVACIÓN",
+          "peso": 0.35
+        },
+        {
+          "nombre": "MADUREZ DEL DESARROLLO TECNOLOGICO ( INVESTIGACIÓN CIENTÍFICA)",
+          "clave": "MADUREZ_DEL_DESARROLLO_TECNOLOGICO_(_INVESTIGACIÓN_CIENTÍFICA)",
+          "peso": 0.3
+        },
+        {
+          "nombre": "ADOPCIÓN DE TECNOLOGÍA",
+          "clave": "ADOPCIÓN_DE_TECNOLOGÍA",
+          "peso": 0.2
+        }
+      ],
+      "peso_total": 1.0
+    }
+  ],
+  "formula": "motor_v1.1: por variable contrib = (points/max) * peso_efectivo; score_bloque = sum(contrib); score_total = promedio de los 3 bloques. Ver SPEC_MOTOR_EVALUACION.md y rules_catalog_motor_v1.json. NO usar puntaje crudo del cliente.",
+  "rules_version": "motor_v1.1"
+}

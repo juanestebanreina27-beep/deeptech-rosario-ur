@@ -1,0 +1,327 @@
+{
+  "rules_version": "motor_v1.1",
+  "score": {
+    "total": "average_of_non_null_blocks",
+    "optional_policy": "skip_and_renorm_within_block_if_renorm_ok_or_weight_lte_0_10",
+    "grado_innovacion_rule": "required_if_innovacion_points_gte_3",
+    "client_score_points": "IGNORED_recalculate_from_catalog"
+  },
+  "discard_rules": [
+    {
+      "id": "D01_sin_vinculo",
+      "field": "vinculo_universidad",
+      "when": "points == 0"
+    },
+    {
+      "id": "D02_solo_idea",
+      "field": "prototipos",
+      "when": "points == 0"
+    },
+    {
+      "id": "D03_operacion_gt_3a",
+      "field": "anos_operacion_comercial",
+      "when": "value > 3"
+    },
+    {
+      "id": "D04_sin_base_tech",
+      "when": "tipo_postulacion == adaptacion_tecnologica && adopcion_tecnologia.points == 0"
+    }
+  ],
+  "irl_by_tipo": {
+    "desarrollo_tecnologico": ["TRL", "BRL", "IPRL", "MRL", "FRL", "TERL"],
+    "desarrollo_tecnologico_salud": ["TRL", "BRL", "IPRL", "MRL", "FRL", "TERL", "RRL"],
+    "adaptacion_tecnologica": ["BRL", "IPRL", "MRL", "FRL", "TERL"]
+  },
+  "irl_ranges": {
+    "TRL": { "min": 1, "max": 9 },
+    "BRL": { "min": 1, "max": 8 },
+    "IPRL": { "min": 1, "max": 6 },
+    "MRL": { "min": 1, "max": 5 },
+    "RRL": { "min": 1, "max": 7 },
+    "FRL": { "min": 1, "max": 5 },
+    "TERL": { "min": 1, "max": 5 }
+  },
+  "variables": [
+    {
+      "variable_key": "nivel_educativo",
+      "bloque": "EQUIPO",
+      "peso": 0.25,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "SIN EDUCACIÓN", "points": 0 },
+        { "label": "EDUCACIÓN BÁSICA", "points": 1 },
+        { "label": "EDUCACIÓN SECUNDARIA", "points": 2 },
+        { "label": "PROFESIONAL", "points": 3 },
+        { "label": "POSTGRADO", "points": 4 },
+        { "label": "DOCTORADO", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "conformacion_equipo",
+      "bloque": "EQUIPO",
+      "peso": 0.1,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "Equipo conformado por 1 persona", "points": 3 },
+        { "label": "Equipo conformado por 2 o más", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "experiencia_profesional",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "Menos de 5 años", "points": 2 },
+        { "label": "Entre 5 y 10 años con roles directivos", "points": 3 },
+        { "label": "Más de 10 años, cargos relevantes y otros emprendimientos", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "grupo_investigacion",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "nota": "Rúbrica corregida post-auditoría (A1 = mejor)",
+      "niveles": [
+        { "label": "No pertenece a grupo de Investigación", "points": 0 },
+        { "label": "Categoría C", "points": 2 },
+        { "label": "Categoría B", "points": 3 },
+        { "label": "Categoría A", "points": 4 },
+        { "label": "Categoría A1", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "dedicacion_tiempo",
+      "bloque": "EQUIPO",
+      "peso": 0.05,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "5% a 10%", "points": 3 },
+        { "label": "10% a 30%", "points": 4 },
+        { "label": "Mayor al 30%", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "vinculo_universidad",
+      "bloque": "EQUIPO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "Líder NO vinculado a la Universidad", "points": 0 },
+        { "label": "Vinculado temporal o servicios", "points": 3 },
+        { "label": "Vinculado fijo o indefinido", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "problema_oportunidad",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Amplias soluciones actuales", "points": 0 },
+        { "label": "Soluciones alternativas sin esfuerzo / local", "points": 1 },
+        { "label": "Se soluciona con esfuerzo / regional", "points": 3 },
+        { "label": "Sin solución efectiva / varias regiones país", "points": 4 },
+        { "label": "Varios países sin solución efectiva", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "propuesta_valor",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Genérica no sustentada", "points": 0 },
+        { "label": "Similar a mercado", "points": 2 },
+        { "label": "Diferente y sustentada", "points": 4 },
+        { "label": "Sustancialmente diferente y sólida", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "desarrollo_tecnologico",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Similar a otras universidades locales", "points": 2 },
+        { "label": "Ventajas vs similar nacional/internacional", "points": 3 },
+        { "label": "Significativamente superior o sin similares", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "prototipos",
+      "bloque": "MODELO",
+      "peso": 0.2,
+      "obligatorio": true,
+      "permite_archivo": true,
+      "niveles": [
+        { "label": "Idea o concepto teórico", "points": 0 },
+        { "label": "Prototipo sin validar", "points": 2 },
+        { "label": "Prototipo en validación", "points": 3 },
+        { "label": "Producto/servicio validado en mercado", "points": 4 },
+        { "label": "Ventas frecuentes", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "diferencial",
+      "bloque": "MODELO",
+      "peso": 0.11,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Sin diferenciales", "points": 1 },
+        { "label": "Sustentados sin preferencia", "points": 3 },
+        { "label": "Sustentados con preferencia y relevancia", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "competencia",
+      "bloque": "MODELO",
+      "peso": 0.03,
+      "obligatorio": false,
+      "renorm_ok": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Muchos competidores superiores", "points": 1 },
+        { "label": "Competidores similares", "points": 3 },
+        { "label": "Pocos y menos potentes", "points": 4 },
+        { "label": "Sin competidores o solo indirectos", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "aliados",
+      "bloque": "MODELO",
+      "peso": 0.02,
+      "obligatorio": false,
+      "renorm_ok": true,
+      "niveles": [
+        { "label": "Sin aliados", "points": 1 },
+        { "label": "Pocos o poco relevantes", "points": 3 },
+        { "label": "Suficientes y relevantes", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "estrategia_pi",
+      "bloque": "MODELO",
+      "peso": 0.02,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "Sin estrategia ni conocimiento PI", "points": 2 },
+        { "label": "Con estrategia y/o conocimiento PI", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "gestion_financiera",
+      "bloque": "MODELO",
+      "peso": 0.01,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "No conoce ni gestiona fuentes", "points": 1 },
+        { "label": "Conoce y ha gestionado recursos", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "gestion_inversiones",
+      "bloque": "MODELO",
+      "peso": 0.01,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "No conoce ni gestiona inversiones", "points": 3 },
+        { "label": "Conoce y ha gestionado inversiones", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "innovacion",
+      "bloque": "INNOVACION",
+      "peso": 0.15,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "No contiene innovaciones", "points": 1 },
+        { "label": "Contiene o desarrolla innovaciones", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "grado_innovacion",
+      "bloque": "INNOVACION",
+      "peso": 0.35,
+      "obligatorio": false,
+      "required_if": "innovacion.points >= 3",
+      "renorm_ok": false,
+      "niveles": [
+        { "label": "Mejora continua", "points": 1 },
+        { "label": "Incremental", "points": 2 },
+        { "label": "Radical", "points": 4 },
+        { "label": "Disruptivo", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "madurez_tecnologica",
+      "bloque": "INNOVACION",
+      "peso": 0.3,
+      "obligatorio": true,
+      "requiere_texto": true,
+      "analisis_ia": true,
+      "niveles": [
+        { "label": "Validaciones en entornos relevantes", "points": 3 },
+        { "label": "Superó validaciones con ajustes", "points": 4 },
+        { "label": "En mercado con usuarios/clientes", "points": 5 }
+      ]
+    },
+    {
+      "variable_key": "adopcion_tecnologia",
+      "bloque": "INNOVACION",
+      "peso": 0.2,
+      "obligatorio": true,
+      "niveles": [
+        { "label": "NO adopta ninguna tecnología", "points": 0 },
+        { "label": "Adopta tecnología tradicional", "points": 2 },
+        { "label": "Adopta tecnología 4.0 o ACTI", "points": 5 }
+      ]
+    }
+  ],
+  "campos_producto": [
+    {
+      "variable_key": "tipo_postulacion",
+      "obligatorio": true,
+      "enum": [
+        "desarrollo_tecnologico",
+        "desarrollo_tecnologico_salud",
+        "adaptacion_tecnologica"
+      ]
+    },
+    {
+      "variable_key": "anos_operacion_comercial",
+      "obligatorio": true,
+      "type": "number",
+      "min": 0
+    },
+    {
+      "variable_key": "sector_id",
+      "obligatorio": true,
+      "type": "int"
+    },
+    {
+      "variable_key": "faculty_id",
+      "obligatorio": true,
+      "type": "int"
+    }
+  ],
+  "never_send_to_llm": [
+    "document_id",
+    "phone",
+    "email",
+    "cedula",
+    "celular",
+    "correo"
+  ]
+}

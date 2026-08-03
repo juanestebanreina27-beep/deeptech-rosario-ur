@@ -1,0 +1,1564 @@
+{
+  "meta": {
+    "proyecto": "Herramienta de evaluación, selección y diagnóstico — Transferencia DeepTechs Universidad del Rosario",
+    "generado": "2026-08-02T20:45:58",
+    "fuentes": {
+      "excel_original": "00_archivo_original/excel/",
+      "powerpoint_original": "00_archivo_original/powerpoint/",
+      "logos": "02_recursos/logos/",
+      "imagenes_referencia": "02_recursos/imagenes_referencia/",
+      "fuente_verdad_para_ia": "01_datos_limpios/herramienta_deeptech_rosario.json"
+    },
+    "como_usar_con_ia": [
+      "Cargar SOLO la carpeta 01_datos_limpios/ como contexto de reglas y datos.",
+      "Usar 02_recursos/ solo para assets visuales (logo e imagenes), no para logica de negocio.",
+      "NO cargar 00_archivo_original/ en el contexto del agente salvo auditoria puntual del Excel/PPT.",
+      "Prompt de construccion: 03_prompts/PROMPT_MAESTRO.md",
+      "Plan por etapas: 04_plan/PLAN_EJECUCION.md",
+      "Listas facultades/sectores: 04_plan/LISTAS_DESPLEGABLES.md"
+    ],
+    "estructura_proyecto": {
+      "contexto_ia": "01_datos_limpios/",
+      "recursos_visuales": "02_recursos/",
+      "archivo_original": "00_archivo_original/ (NO usar como contexto de IA salvo auditoria)",
+      "prompts": "03_prompts/",
+      "plan": "04_plan/"
+    }
+  },
+  "postulacion": {
+    "titulo": "Formulario de postulación — Proceso de transferencia hacia el desarrollo de DeepTechs",
+    "institucion": "Universidad del Rosario",
+    "secciones": [
+      {
+        "id": "1",
+        "nombre": "1. DATOS DE CONTACTO / EQUIPO DE TRABAJO",
+        "variables": [
+          {
+            "id": 1,
+            "clave": "NOMBRE_LÍDER",
+            "nombre": "NOMBRE LÍDER",
+            "descripcion": "Nombre del líder responsable de participar en\n el programa de emprendimento",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 2,
+            "clave": "CORREO_ELECTRONICO_(PREFERIBLEMENTE_LABORAL)",
+            "nombre": "CORREO ELECTRONICO  (PREFERIBLEMENTE LABORAL)",
+            "descripcion": "Correo electronico principal del líder\n responsable para participar en el programa de emprendimiento",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 3,
+            "clave": "CÉDULA",
+            "nombre": "CÉDULA",
+            "descripcion": "Cédula de líder responsable de participar \nen el programa",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 4,
+            "clave": "CELULAR",
+            "nombre": "CELULAR",
+            "descripcion": "Celular del líder responsable en participar \nen el programa",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 5,
+            "clave": "CARGO_/_ROL_EMPRENDIMIENTO",
+            "nombre": "CARGO / ROL EMPRENDIMIENTO",
+            "descripcion": "Cargo o rol del líder responsable en la gestión\ndel emprendimiento",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 6,
+            "clave": "FACULTAD_/_UNIDAD_ACADEMICA",
+            "nombre": "FACULTAD / UNIDAD ACADEMICA",
+            "descripcion": "Facultad con la que el postulante tiene el vinculo",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 7,
+            "clave": "NIVEL_EDUCATIVO",
+            "nombre": "NIVEL EDUCATIVO",
+            "descripcion": "Describa el nivel edicativo que ha alcanzado y qe esta certificado por las autorides de educación del pais.",
+            "niveles": [
+              {
+                "etiqueta": "SIN EDUCACIÓN",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "EDUCACIÓN BÁSICA",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "EDUCACIÓN SECUNDARIA",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "PROFESIONAL",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "POSTGRADO",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "DOCTORADO",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 8,
+            "clave": "GRUPO_INVESTIGACIÓN",
+            "nombre": "GRUPO INVESTIGACIÓN",
+            "descripcion": "Grupo de investigación al que pertenece el líder\n responsable de participar en el programa de emprendimiento. Indicar el nombre del grupo de investigación y la categoría",
+            "niveles": [
+              {
+                "etiqueta": "No pertenece a grupo de Investigación",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "Pertenece a grupos de investigaciòn categoria A1",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "Pertenece a grupos de investigación categoria A",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "Pertenece a grupos de investigación categoria B",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "Pertenece a grupos de investigación categoria C",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 9,
+            "clave": "ROL_/_CARGO_/_VINCULO_UNIVERSIDAD",
+            "nombre": "ROL / CARGO / VINCULO UNIVERSIDAD",
+            "descripcion": "Rol o cargo del postulante dentro de la universidad",
+            "niveles": [
+              {
+                "etiqueta": "Líder NO viculado a la Universidad",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "Líder vinculado a la Universidad temporal o servicios",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "Lider vinculado a la universidad fijo o indefinido 5",
+                "puntaje": null
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 10,
+            "clave": "CONFORMACIÓN_EQUIPO_DE_TRABAJO_Y_ROL",
+            "nombre": "CONFORMACIÓN EQUIPO DE TRABAJO Y ROL",
+            "descripcion": "Descripción del equipo de trabajo comprometido\n con el desarrollo del emprendimiento, profesiones , roles y responsabilidades dentro del emprendimiento",
+            "niveles": [
+              {
+                "etiqueta": "Equipo conformado por 1 persona",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "Equipo conformado por 2 o más",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 11,
+            "clave": "EXPERIENCIA_PROFESIONAL_Y_LABORAL_EN_EL_SECTOR",
+            "nombre": "EXPERIENCIA PROFESIONAL Y LABORAL EN EL SECTOR",
+            "descripcion": "Describa los años de experiencia profesional y laboral del líder responsable del emprendimiento. Años de experiencia, roles o cargos desempeñados. Describa si el lider del emprendimiento ha desarrollado otros emprendimientos",
+            "niveles": [
+              {
+                "etiqueta": "El líder emprendedor tiene menos de 5 años de experiencia profesional / laboral",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "El líder emprendedor tiene entre 5 años y 10 años de experiencia profesional laboral y ha ocupado roles directivos",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El líder emprendedor tiene más de 10 años de experiencia profesional, ha ocupado cargos relevantes y ha desarrollado otros negocios o emprendimientos",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 12,
+            "clave": "DEDICACIÓN_DE_TIEMPO",
+            "nombre": "DEDICACIÓN DE TIEMPO",
+            "descripcion": "Describa el porcentaje de dedicación de tiempo al mes de cada uno de los integrantes líderes del resultado de investigación",
+            "niveles": [
+              {
+                "etiqueta": "El porcentaje de dedicación del tiempo del equipo líder es entre el 5% y 10% de su tiempo productivo",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El porcentaje de dedicación de tiempo del equipo líder es entre el 10% y el30%",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "El porcentaje de dedicación de tiempo del equipo líder es mayor al 30%",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "nombre": "2. MODELO DE NEGOCIO DEL FUTURO EMPRENDIMIENTO",
+        "variables": [
+          {
+            "id": 1,
+            "clave": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+            "nombre": "Problema u oportunidad a resolver",
+            "descripcion": "Describa el problema que el emprendimiento\n pretende solucionar. Describa los hechos, las causas, las consecuencias y los impactos. Soporte el problema con hechos, datos, estadisticas, investigaciones y en general evidencia comprobable. Describa si este problema se presenta solo en su región o en otras regiones u otros paises. Sustente y argumente el problema u oportunidad.",
+            "niveles": [
+              {
+                "etiqueta": "Problema que tiene amplias soluciones actuales",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "El problema lo soluciona los dolientes de formas alternativas sin esfuerzo y/o se presenta localmente",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "El problema se soluciona con esfuerzo y dolor y/o se presenta localmente /Regionalmente",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El problema no tiene una solución efectiva y se presenta en varias regiones del país",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "El problema se presenta en varios países y no tiene solución efectiva actualmente",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANALISIS DE LA IA PARA \nDETERMINAR SI EL PROBLEMA YA ESTA SOLUCIONADO Y COMO"
+            }
+          },
+          {
+            "id": 2,
+            "clave": "DESARROLLO_TECNOLOGICO_O_RESULTADO_DE_INVESTIGACIÓN_QUE_SERÁ_LA_BASE_DEL_FUTURO_EMPRENDIMIENTO",
+            "nombre": "Desarrollo tecnologico o resultado de investigación que será la base del futuro emprendimiento",
+            "descripcion": "Describa con detaller técnicos y sustentado en datos, estadistifas y fuentes su desarrollo tecnológico o su resultado de investigación que es la base del futuro emprendimiento",
+            "niveles": [
+              {
+                "etiqueta": "El desarrollo tecnologico es similar a otros creados en otras universidades locales",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "El desarrollo tecnologico tiene ventajas que s traducen en beneficios frente a otros desarrollos similares existentes nacional o internacionalmente",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El desarrollo tecnologico es significativamente diferente y superior en ventajas y beneficios frente a soluciones similares o no tiene soluciones similares",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANÁLISIS CON IA DE TECNOLOGÍAS SIMILARES."
+            }
+          },
+          {
+            "id": 3,
+            "clave": "PROPUESTA_DE_VALOR_DEL_FUTURO_EMPRENDIMIENTO",
+            "nombre": "Propuesta de valor del futuro emprendimiento",
+            "descripcion": "Describa la propuesta de valor del emprendimiento.\n Describa las caracteristicas y en que se basan o sustentan las caracteristicas y componentes de la propuesta de valor",
+            "niveles": [
+              {
+                "etiqueta": "La propuesta de valor es generica, no esta sustentada y no esta articulada",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "La propuesta de valor sus caracteristicas y componentes son similares a lo existente en el mercado",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "La propuesta de valor sus caracteristicas y componente son diferentes a lo existente en el mercado y estan sustentadas / argumentada e integradas",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "La propuesta de valor es sustancialmente diferente a lo existente y esta solidamente fundamentada e integrada",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANALISIS DE LA IA PARA \nDETERMINAR SI LA PROPUESTA DE VALOR ES DIFERENTE Y RELEVANTE DE LO EXISTENTE EN EL MERCADO"
+            }
+          },
+          {
+            "id": 4,
+            "clave": "PROTOTIPOS_/_PRODUCTOS_O_SERVICIOS_EN_DESARROLLO",
+            "nombre": "Prototipos / Productos o servicios en desarrollo",
+            "descripcion": "Describa detalladamente si tiene prototipos, \nproductos y /o servicios y sus niveles de desarrollo.",
+            "niveles": [
+              {
+                "etiqueta": "Idea o concepto téorico",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "Prototipo sin validar",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "Prototipo en proceso de validación",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "Producto o servicio validado en el mercado",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "Producto / servicio con ventas frecuentes",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": true,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANÁLISIS CON IA DE PRODUCTOS O SERVICIOS SIMILARES."
+            }
+          },
+          {
+            "id": 5,
+            "clave": "DIFERENCIAL_O_FACTOR_DE_PREFERENCIA_Y_RELEVANCIA",
+            "nombre": "Diferencial o factor de preferencia y relevancia",
+            "descripcion": "Descripción del factor o variables que hacen\n quesu desarrollo tecnológico, prototipo, desarrollo sea diferente a lo existente y cuyas caracteristicas generan preferencia, y relevancia frente a lo existente. Sustente el diferencial o diferenciales con base en evidencia e investigaciones de la competencia o de analisis de la industria o el sector.",
+            "niveles": [
+              {
+                "etiqueta": "No se identifican diferenciales frente propuestas similares",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "Los diferenciales estan sustentados pero no generan relevancia ni preferencia",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "Los diferenciales estan sustentados y generan relevancia y preferencia",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 6,
+            "clave": "MERCADO_O_INDUSTRIA_AL_QUE_PERTENECE_EL_EMPRENDIMIENTO",
+            "nombre": "Mercado o industria al que pertenece el  emprendimiento",
+            "descripcion": "Describa el mercado, industria o sector al cual pertenece\n el emprendimiento. Describa las principales caracteristicas, actores, oportunidades, desafío y barreras que tiene la industria o mercado. Sistente la descripción con cifras e investigaciones actualizadas.",
+            "niveles": [],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": true
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 7,
+            "clave": "COMPETENCIA:_ANÁLISIS_DE_COMPETIDORES_DIRECTOS_E_INDIRECTOS",
+            "nombre": "Competencia: Análisis de competidores directos  e indirectos",
+            "descripcion": "Describa la competencia, tanto directa como indirecta de\n los productos / servicios del emprendimiento. También de la propuesta de valor. Describa con nombres y datos concretos los principales competidores y sus productos / servicios asociados.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento tiene muchos competidores y sus propuesta de valor, productos o servicios son superiores a los del emprendimiento",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "El emprendimiento tiene competidores y sus propuestas de valor, productos, servicios son similares a los del emprendimiento",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El emprendimiento tiene pocos competidores y la propuesta de valor, productos y servicios son menos potentes que los del emprendimiento",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "El emprendimiento no tiene competidores o tiene algunos competidores indirectos y su propuesta de valor, productos y servicios son necesarios en el mercado",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANÁLISIS CON IA DE \nLOS COMPETIDORES FRENTE A LA SOLUCIÓN QUE SE ESTA POSTILANDO"
+            }
+          },
+          {
+            "id": 8,
+            "clave": "ALIADOS_/_PROVEEDORES",
+            "nombre": "Aliados / proveedores",
+            "descripcion": "Describa los aliados, proveedores, socios,\nfinanciadores del emprendimiento. Describa cuantos aliados se tiene y concretamente quienes son.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento no tiene aliados",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "El emprendimiento tiene pocos aliados, no tan relevantes o reconocidos",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El emprendimiento tiene los aliados suficientes y son relevantes o reconocidos",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANÁLISIS CON IA"
+            }
+          },
+          {
+            "id": 9,
+            "clave": "NÚMERO_DE_CLIENTES_FRECUENTES_Y_NOMBRES",
+            "nombre": "Número de clientes frecuentes y nombres",
+            "descripcion": "Describa cuantos clientes frecuentes, recurrentes tiene\n el emprendimiento y cuales son los clientes concretamente. Describa si tiene contratos recurrentes y de que magnitud (plazo, monto).",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento no tiene clientes frecuentes",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "El emprendimiento si tiene clientes frecuentes",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El emprendimiento tiene clientes fidelizados con contratos recurrentes",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 10,
+            "clave": "VENTAS_PROMEDIO_MENSUALES",
+            "nombre": "Ventas promedio mensuales",
+            "descripcion": "Informe las ventas promedio mensuales del\n emprendimiento. Estos datos deben ser fiel a la realidad.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento NO tiene ventas",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El emprendimiento tiene ventas recurrentes",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 11,
+            "clave": "ESTRATEGIA_DE_PROPIEDAD_INTELECTUAL",
+            "nombre": "Estrategia de propiedad intelectual",
+            "descripcion": "Describa si el emprendimiento ha desarrollado una\n estrategia de propiedad intelectual, si tiene activos en proceso de protección o protegidos",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento No tiene estrategia ni conocimiento de propiedad intelectual",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "El emprendimiento si tiene estrategia y/o conocimiento de propiedad intelectual",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 12,
+            "clave": "GESTIÓN_FINANCIERA",
+            "nombre": "Gestión financiera",
+            "descripcion": "Describa cómo el emprendimiento gestiona sus finanzas,\n si conoce fuentes de financiación adecuadas para el negocio, si usa o aplica a las fuentes de recursos o convocatorias de apoyo a emprendimientos o desarrollo de tecnologías.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento no conocer las fuentes de financiamiento ni ha gestionado recursos financieros",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "El emprendimiento SI conoce las fuentes de financiemiento y ha gestionado recursos financieros",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 13,
+            "clave": "GESTIÓN_DE_INVERSIONES",
+            "nombre": "Gestión de inversiones",
+            "descripcion": "Describa si el emprendimiento ha gestionado inversiones\n y cómo las ha gestionado, con que fondos, con que entidades.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento no conoce las fuentes de inversión ni ha gestionado fuentes de inversión",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El emprendimiento si conoce las fuentes de inversión y si las ha gestionado inversiones",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "nombre": "3. INNOVACIÓN / TECNOLOGÍA",
+        "variables": [
+          {
+            "id": 1,
+            "clave": "INNOVACIÓN",
+            "nombre": "Innovación",
+            "descripcion": "Describa detalladamente si su futor emprendimiento genera innovaciones. Justifique con evidencia (real) por que es una innovación",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento no contiene o desarrolla innovaciones",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "El emprendimiento contiene o desarrolla innovaciones",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANALIZAR CON IA \nLA DESCRPCIÓN DE INNOVACIONES FRENTE A LO EXISTENTE."
+            }
+          },
+          {
+            "id": 2,
+            "clave": "TIPO_DE_INNOVACIÓN",
+            "nombre": "Tipo de innovación",
+            "descripcion": "Si el proyecto de emprendimiento genera innovación\n, describir que tipo de innovación ha generado o esta generando",
+            "niveles": [
+              {
+                "etiqueta": "Innovación de modelo de negocio, de producto, de servicio, de proceso, organizacional, de marketing, social, tecnologica.",
+                "puntaje": null
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 3,
+            "clave": "GRADO_DE_INNOVACIÓN",
+            "nombre": "Grado de innovación",
+            "descripcion": "Si genera innovación, describa el grado de innovación que esta desarrollando para o dentro \nde su emprendimiento, justifique por que esta en ese grado con ejemplos de la competencia directa o indirecta.",
+            "niveles": [
+              {
+                "etiqueta": "La innovación corresponde a una mejora continua",
+                "puntaje": 1
+              },
+              {
+                "etiqueta": "La innovación corresponde a un grado incremental",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "La innovación corresponde a un grado radical",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "La innovación corresponde a un grado disruptivo",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": false,
+              "opcional": true,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          },
+          {
+            "id": 4,
+            "clave": "NIVEL_DE_MADUREZ_O_DESARROLLO_DE_TECNOLOGÍA_/_DESARROLLO_DE_INVESTIGACIÓN_CIENTÍFICA",
+            "nombre": "Nivel de madurez o desarrollo de tecnología / desarrollo de investigación científica",
+            "descripcion": "Describa el nivel de madurez o desarrollo de su tecnología o resultado de investigación con respecto a que nivel de alistamiento tiene para ser usada o comercializada",
+            "niveles": [
+              {
+                "etiqueta": "El desarrollo tecnologico esta en validaciones y pruebas en entornos relevantes",
+                "puntaje": 3
+              },
+              {
+                "etiqueta": "El desarrollo tecnologico ya supero las validaciones con clientes o usuarios y tuvo sus ajustes",
+                "puntaje": 4
+              },
+              {
+                "etiqueta": "El desarrollo tecnologico ya esta en el mercado y tiene usuarios, clienrtes o beneficiarios",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": true,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": true,
+              "instruccion": "ANÁLISIS CON IA DE TECNOLOGÍAS SIMILARES."
+            }
+          },
+          {
+            "id": 5,
+            "clave": "ADOPCIÓN_DE_TECNOLOGÍA",
+            "nombre": "Adopción de tecnología",
+            "descripcion": "Describa si el emprendimiento adopta tecnología ya desarrollada y\n cual es la tecnología o tecnologías que esta adaptando para fortalecer el emprendimiento.",
+            "niveles": [
+              {
+                "etiqueta": "El emprendimiento NO adopta ninguna tecnología (ni tradicional ni de punta)",
+                "puntaje": 0
+              },
+              {
+                "etiqueta": "El emprendimiento adopta tecnología tradicional o de amplio uso",
+                "puntaje": 2
+              },
+              {
+                "etiqueta": "El emprendimiento adopta tecnología 4,0 ó ACTI",
+                "puntaje": 5
+              }
+            ],
+            "tipo_entrada": {
+              "obligatorio": true,
+              "opcional": false,
+              "requiere_descripcion_texto": false,
+              "permite_cargar_archivo": false,
+              "listado_seleccion": false
+            },
+            "analisis_ia": {
+              "activo": false,
+              "instruccion": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "diagnostico_kth_irl": {
+    "titulo": "Diagnóstico KTH Innovation Readiness Level (IRL)",
+    "subtitulo": "Complemento del diagnóstico de madurez de la futura DeepTech",
+    "descripcion": "Marco de madurez multi-dimensional para evaluar emprendimientos deeptech. Cada dimensión se autoevalúa y se contrasta con IA. El nivel seleccionado debe justificarse; la IA contrasta con el formulario.",
+    "fuente": "Adaptado de KTH Innovation Readiness Level",
+    "dimensiones": [
+      {
+        "codigo": "TRL",
+        "nombre": "Technology Readiness",
+        "nombre_completo": "TRL: Technology Readiness",
+        "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "Principios básicos observados. Conocimiento científico base que\n sustenta la idea de la solución"
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Concepto técnologico fomulado: Aplicaciónpotencial identificada pero\n sin datos empíricos"
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Prueba de concepto analitica o experimental. Primera evidencia de \nfactibilidad"
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Tecnología validada en laboratorio. Prototipo de baja fidelidad funcional\n en condiciones controladas"
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Tecnología validada en entorno relevante (simulado o semi real). \nPrototipo de media fidelidad"
+          },
+          {
+            "nivel": 6,
+            "descripcion": "Tecnología demostrada en entorno relevante: Pilotos con usuarios\n reales en condiciones controladas"
+          },
+          {
+            "nivel": 7,
+            "descripcion": "Prototipo en entorno operacional: Sistema de salud real, con limitaciones"
+          },
+          {
+            "nivel": 8,
+            "descripcion": "Sistema completo y calificado: La tecnología está lista para uso en \ncondiciones operacionales reales"
+          },
+          {
+            "nivel": 9,
+            "descripcion": "Tecnología operacional en su forma final. Comprobada en condiciones reales"
+          }
+        ]
+      },
+      {
+        "codigo": "BRL",
+        "nombre": "Business Readiness",
+        "nombre_completo": "BRL: Business Readiness",
+        "nota_evaluacion": "Contrastar las respuestas dadas en la sesión \nde modelo de negocio por el postulante con el nivel de madurez puesto por el postulante.",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "En diseño: El modelo de negocio esta en proceso de diseño\n o esta con una propuesta no validada, no hay claridad como se crea y se distribuye valor."
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Propuesta de valor: Existe una propuesta de valor articulada pero sin\n validación de clientes o beneficiarios reales."
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Modelo de negocio en validación: Modelo de negocio en proceso de \nvalidación de sus clientes, aliados, y las hipotesis de cada componente con plan de validación concreto"
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Modelo de negocio validado: Modelo de negocio con las validaciones\n y ajustes realizados"
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Modelo de negocio con tracción de ventas y en proceso de crecimiento"
+          },
+          {
+            "nivel": 6,
+            "descripcion": "Modelo de negocio escalable con evidencia de crecimiento sostenible\n y acceso a financiamiento"
+          },
+          {
+            "nivel": 7,
+            "descripcion": "Empresa autosostenible con un portafolio de clientes diversificado."
+          },
+          {
+            "nivel": 8,
+            "descripcion": "Empresa con trayectoria de crecimiento y desarrollo sostenible"
+          }
+        ]
+      },
+      {
+        "codigo": "IPRL",
+        "nombre": "Intelectual Property Readiness",
+        "nombre_completo": "IPRL: Intelectual Property Readiness",
+        "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "Sin conciencia de la propiedad intelectual: La tecnología, \nproducto o servicio no ha sido evaluada desde la perspectiva de la propiedad intelectual"
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Conciencia básica: El equipo conoce la importancia de la propiedad\n intelectual pero no tiene estrategia ni procesos formales o en desarrollo"
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Búsqueda de antecedentes: Análisis de estado del arte de la\n propiedad intelectual realizado. Sin solicitudes activas, sin estrategia"
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Diseño de la estrategia de PI y solicitudes activas: Estrategia de PI diseñada y \nsolicitud de patente, modelo de utilidad, secreto industrial, o derechos de autor en proceso."
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Protección vigente: PI concedida y activa, Estrategia de portafolio de PI en desarrollo"
+          },
+          {
+            "nivel": 6,
+            "descripcion": "Portafolio estratégico: Cartera de PI gestionada activamente como\n activo competitivo. Licencias y alianzas basadas en PI"
+          }
+        ]
+      },
+      {
+        "codigo": "MRL",
+        "nombre": "Market Readiness",
+        "nombre_completo": "MRL: Market Readiness",
+        "nota_evaluacion": "Contrastar las respuestas dadas por el postulante con la \ninformación analizada del formulario y generar análisis. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "Mercado hipotético: El equipo no ha tendido contacto con potenciales\n usuarios, beneficiarios, futuros clientes (pagadores)."
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Mercado identificado: Se han realizado las primeras conversaciones con\n usuarios. Analisis de la competencia básico."
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Mercado validado con datos: Segmentación clara, canales de distribución\n identificados"
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Estrategia de mercado en ejecución: Canales validados, posicionamiento \ndifereciado y demostrado. Se conoce y analiza los competidores directos e indirectos"
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Liderazgo en el mercado demostrado: Referente en su categoría, \nexpansión en proceso a nuevos mercados"
+          }
+        ]
+      },
+      {
+        "codigo": "RRL",
+        "nombre": "Regulatory Readiness",
+        "nombre_completo": "RRL: Regulatory Readiness",
+        "nota_evaluacion": "Solo para postulaciones del\n sector salud. El nivel seleccionado debe tener una casilla donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "Sin análisis regulatorio: La tecnología / innovación no ha sido \nevaluada desde la perspectiva regulatoria."
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Clasificación realizada: La técnología / innovación ha sido clasificada\n por tipo de producto regulado (dispositivo, software..). Clasificación INVIMA / IMDRF / SAMD"
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Ruta regulatoria definida: Se conoce la ruta de aprobación aplicable\n (registro sanitario, notificación, permiso sanitario de funcionamiento) y los requisitos especificos. Estudips de desempeño /biocompatibilidad / validación clinica."
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Documentación en preparación: Se están compilando los estudios\n técnicos, clínicos y de calidad requeridos para la solicitud."
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Solicitud radicada: La solicitud de registro o permiso ha sido\n presentada ante el INVIMA y esta en evaluación. Radicación INVIMA activa."
+          },
+          {
+            "nivel": 6,
+            "descripcion": "Registro obtenido: La tecnología / innovación\n cuenta con el registro sanitario o autorización regulatoria vigente para operar en el mercado colombiano."
+          },
+          {
+            "nivel": 7,
+            "descripcion": "Expansión regional: Reconocimiento mutuo de registro en al \nmenos un país PANDRH"
+          }
+        ]
+      },
+      {
+        "codigo": "FRL",
+        "nombre": "Financial Readiness Level",
+        "nombre_completo": "FRL: Financial Readiness Level",
+        "nota_evaluacion": "El nivel seleccionado debe tener una casilla\n donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "Sin estrategia de financiamiento identificado. La tecnología o innovación\n se desarrolla con recursos propios o muy limitados."
+          },
+          {
+            "nivel": 2,
+            "descripcion": "Financiamiento semilla obtenido (subsidios, capital inicial). Runway\n menor a 12 meses"
+          },
+          {
+            "nivel": 3,
+            "descripcion": "Ronda de inversión completada (seed o serie A). Financiamiento para \nvalidación y primeras ventas"
+          },
+          {
+            "nivel": 4,
+            "descripcion": "Emprendimiento con financiamiento en crecimiento (serie B+) o con ingresos que cubren la operación y permiten escalar."
+          },
+          {
+            "nivel": 5,
+            "descripcion": "Empresa con crecimiento sostenido. Acceso a mercado de capitales o con\n estrategia de salida definida."
+          }
+        ]
+      },
+      {
+        "codigo": "TERL",
+        "nombre": "Team Building Readiness",
+        "nombre_completo": "TERL: Team Building Readiness",
+        "nota_evaluacion": "El nivel seleccionado debe tener una casilla\n donde se pida la justificación de ese nivel",
+        "niveles": [
+          {
+            "nivel": 1,
+            "descripcion": "El proyecto de emprendimento tiene un fundador, \nque esta desarrollando el proyecto en su totalidad, tienen varios roles y su remuneración no esta definida. Tiene ayudantes."
+          },
+          {
+            "nivel": 2,
+            "descripcion": "El equipo cuenta con dos o más fundadores / líderes y con una o dos\n personas de apoyo técnico o administrativo."
+          },
+          {
+            "nivel": 3,
+            "descripcion": "El equipo de trabajo tiene roles y responsabilidades definidas, así\n como asignaciones de remuneración definidas."
+          },
+          {
+            "nivel": 4,
+            "descripcion": "El equipo cuenta con roles, responsabilidades y metas asociadas \nnivel directivo (liderazgo), técnico, operativo y administrativo concretamente definidos y caracterizados. Tiene asignaciones salariales acordes con los cargos y responsabilidades. Hay un equipo que se complementa. La dedicación de tiempo es parcial o total."
+          },
+          {
+            "nivel": 5,
+            "descripcion": "El equipo cuenta con un equipo suficiente y compacto para sostener\n la operación y el crecimiento del emprendimiento, cuenta con politicas de desarrollo de talento humano, cargos definidos, curvas salariales. Cuenta con plan de beneficios y espacios de teambuilding. La dedicación de tiempo es total. Tienen consejos directivos o consultivos."
+          }
+        ]
+      }
+    ]
+  },
+  "score_deeptech": {
+    "titulo": "Score de evaluación DeepTech U. Rosario",
+    "descripcion": "Pesos relativos por bloque para calcular score ponderado. Cada variable se puntúa según niveles de postulación y se multiplica por su peso.",
+    "bloques": [
+      {
+        "id": "EQUIPO_DE_TRABAJO",
+        "nombre": "EQUIPO DE TRABAJO",
+        "variables": [
+          {
+            "nombre": "NIVEL EDUCATIVO",
+            "clave": "NIVEL_EDUCATIVO",
+            "peso": 0.25
+          },
+          {
+            "nombre": "CONFORMACIÓN EQUIPO DE TRABAJO",
+            "clave": "CONFORMACIÓN_EQUIPO_DE_TRABAJO",
+            "peso": 0.1
+          },
+          {
+            "nombre": "EXPERIENCIA PROFESIONAL Y LABORAL",
+            "clave": "EXPERIENCIA_PROFESIONAL_Y_LABORAL",
+            "peso": 0.2
+          },
+          {
+            "nombre": "GRUPO DE INVESTIGACIÓN",
+            "clave": "GRUPO_DE_INVESTIGACIÓN",
+            "peso": 0.2
+          },
+          {
+            "nombre": "DEDICACIÓN DE TIEMPO",
+            "clave": "DEDICACIÓN_DE_TIEMPO",
+            "peso": 0.05
+          },
+          {
+            "nombre": "VINCULO CON LA UNIVERSIDAD",
+            "clave": "VINCULO_CON_LA_UNIVERSIDAD",
+            "peso": 0.2
+          }
+        ],
+        "peso_total": 1.0
+      },
+      {
+        "id": "MODELO_DE_NEGOCIO",
+        "nombre": "MODELO DE NEGOCIO",
+        "variables": [
+          {
+            "nombre": "PROBLEMA U OPORTUNIDAD A RESOLVER",
+            "clave": "PROBLEMA_U_OPORTUNIDAD_A_RESOLVER",
+            "peso": 0.2
+          },
+          {
+            "nombre": "PROPUESTA DE VALOR (INNOVADORA)",
+            "clave": "PROPUESTA_DE_VALOR_(INNOVADORA)",
+            "peso": 0.2
+          },
+          {
+            "nombre": "DESARROLLO TECNOLOGICO / RESULTADO INVESTIGACIÓN",
+            "clave": "DESARROLLO_TECNOLOGICO_/_RESULTADO_INVESTIGACIÓN",
+            "peso": 0.2
+          },
+          {
+            "nombre": "PROTOTIPOS / PRODUCTOS / SERVICIOS",
+            "clave": "PROTOTIPOS_/_PRODUCTOS_/_SERVICIOS",
+            "peso": 0.2
+          },
+          {
+            "nombre": "DIFERENCIAL CON EVIDENCIAS (INNOVACIÓN)",
+            "clave": "DIFERENCIAL_CON_EVIDENCIAS_(INNOVACIÓN)",
+            "peso": 0.11
+          },
+          {
+            "nombre": "ANÁLISIS COMPETENCIA",
+            "clave": "ANÁLISIS_COMPETENCIA",
+            "peso": 0.03
+          },
+          {
+            "nombre": "ALIADOS",
+            "clave": "ALIADOS",
+            "peso": 0.02
+          },
+          {
+            "nombre": "ESTRATEGIA PROPIEDAD INTELECTUAL",
+            "clave": "ESTRATEGIA_PROPIEDAD_INTELECTUAL",
+            "peso": 0.02
+          },
+          {
+            "nombre": "GESTIÓN FINANCIERA",
+            "clave": "GESTIÓN_FINANCIERA",
+            "peso": 0.01
+          },
+          {
+            "nombre": "GESTIÓN DE INVERSIONES",
+            "clave": "GESTIÓN_DE_INVERSIONES",
+            "peso": 0.01
+          }
+        ],
+        "peso_total": 1.0
+      },
+      {
+        "id": "INNOVACI_N_TECNOLOG_A",
+        "nombre": "INNOVACIÓN / TECNOLOGÍA",
+        "variables": [
+          {
+            "nombre": "INNOVACIÓN",
+            "clave": "INNOVACIÓN",
+            "peso": 0.15
+          },
+          {
+            "nombre": "GRADO DE INNOVACIÓN",
+            "clave": "GRADO_DE_INNOVACIÓN",
+            "peso": 0.35
+          },
+          {
+            "nombre": "MADUREZ DEL DESARROLLO TECNOLOGICO ( INVESTIGACIÓN CIENTÍFICA)",
+            "clave": "MADUREZ_DEL_DESARROLLO_TECNOLOGICO_(_INVESTIGACIÓN_CIENTÍFICA)",
+            "peso": 0.3
+          },
+          {
+            "nombre": "ADOPCIÓN DE TECNOLOGÍA",
+            "clave": "ADOPCIÓN_DE_TECNOLOGÍA",
+            "peso": 0.2
+          }
+        ],
+        "peso_total": 1.0
+      }
+    ],
+    "formula": "score_bloque = sum(puntaje_variable * peso). Los bloques se combinan según reglas del proceso (equipo, modelo de negocio, innovacion)."
+  },
+  "proceso_seleccion": {
+    "titulo": "Proceso de selección y evaluación — Transferencia DeepTech U. Rosario",
+    "objetivo": "Seleccionar, evaluar y diagnosticar emprendimientos deeptech con base en postulación, criterios de descarte, score ponderado y madurez KTH IRL, con contraste por IA.",
+    "flujo": [
+      {
+        "paso": 1,
+        "id": "postulacion",
+        "nombre": "Formulario de postulación",
+        "descripcion": "El líder completa datos de equipo, modelo de negocio e innovación/tecnología.",
+        "entrada": "Respuestas del formulario (texto, niveles, archivos opcionales)",
+        "salida": "Expediente de postulación estructurado"
+      },
+      {
+        "paso": 2,
+        "id": "filtros_entrada",
+        "nombre": "Variables básicas que descartan la selección de entrada",
+        "descripcion": "Filtros binarios de elegibilidad. Si se cumple alguna condición de descarte, la postulación no avanza.",
+        "criterios_descarte": [
+          "El investigador o profesor no tiene vínculo con la universidad",
+          "Solo ideas/conceptos (sin prototipos ni productos mínimos viables)",
+          "Tiene más de 3 años con operación comercial",
+          "No adapta tecnología ni tiene un desarrollo tecnológico que soporte el futuro emprendimiento"
+        ],
+        "salida": "Apto / No apto"
+      },
+      {
+        "paso": 3,
+        "id": "clasificacion_tipo",
+        "nombre": "Clasificación del tipo de postulación",
+        "descripcion": "Define qué dimensiones KTH IRL se miden según el perfil del proyecto.",
+        "tipos": [
+          {
+            "id": "desarrollo_tecnologico",
+            "nombre": "Desarrollo tecnológico / Resultado de investigación",
+            "descripcion": "Están desarrollando una tecnología producto de una investigación o proyecto científico",
+            "dimensiones_irl": [
+              "TRL",
+              "BRL",
+              "IPRL",
+              "MRL",
+              "FRL",
+              "TERL"
+            ]
+          },
+          {
+            "id": "desarrollo_tecnologico_salud",
+            "nombre": "Desarrollo tecnológico del sector salud",
+            "descripcion": "Tecnología de investigación/proyecto científico + sector salud. Incluye dimensión regulatoria.",
+            "dimensiones_irl": [
+              "TRL",
+              "BRL",
+              "IPRL",
+              "MRL",
+              "FRL",
+              "TERL",
+              "RRL"
+            ]
+          },
+          {
+            "id": "adaptacion_tecnologica",
+            "nombre": "Adaptación tecnológica",
+            "descripcion": "Adoptan/adaptan tecnología para fortalecer el emprendimiento (sin TRL propio de I+D).",
+            "dimensiones_irl": [
+              "BRL",
+              "IPRL",
+              "MRL",
+              "FRL",
+              "TERL"
+            ]
+          }
+        ]
+      },
+      {
+        "paso": 4,
+        "id": "score_deeptech",
+        "nombre": "Cálculo del score DeepTech",
+        "descripcion": "Ponderación por bloques: Equipo de trabajo, Modelo de negocio, Innovación/Tecnología.",
+        "bloques_ref": "ver score_deeptech.bloques"
+      },
+      {
+        "paso": 5,
+        "id": "diagnostico_irl",
+        "nombre": "Medición de niveles de madurez (KTH IRL)",
+        "descripcion": "Gráfico de diagnóstico con puntos principales a desarrollar. Análisis y contraste con IA entre autoevaluación y evidencia del formulario.",
+        "dimensiones_disponibles": [
+          {
+            "codigo": "TRL",
+            "nombre": "Technology Readiness Level"
+          },
+          {
+            "codigo": "BRL",
+            "nombre": "Business Readiness Level"
+          },
+          {
+            "codigo": "IPRL",
+            "nombre": "Intellectual Property Readiness Level"
+          },
+          {
+            "codigo": "MRL",
+            "nombre": "Market Readiness Level"
+          },
+          {
+            "codigo": "RRL",
+            "nombre": "Regulatory Readiness Level",
+            "solo_salud": true
+          },
+          {
+            "codigo": "FRL",
+            "nombre": "Financial Readiness Level"
+          },
+          {
+            "codigo": "TERL",
+            "nombre": "Team Building Readiness Level"
+          }
+        ]
+      },
+      {
+        "paso": 6,
+        "id": "analisis_ia",
+        "nombre": "Análisis y contraste con IA",
+        "descripcion": "La IA contrasta texto libre (problema, propuesta de valor, tecnología, competencia, innovación) con niveles declarados y con conocimiento externo.",
+        "campos_con_ia": [
+          "problema_u_oportunidad",
+          "desarrollo_tecnologico",
+          "propuesta_de_valor",
+          "prototipos_productos",
+          "diferencial",
+          "competencia",
+          "innovacion",
+          "madurez_tecnologica",
+          "niveles_irl"
+        ]
+      },
+      {
+        "paso": 7,
+        "id": "resultado",
+        "nombre": "Resultado: selección + diagnóstico",
+        "descripcion": "Score ponderado, perfil IRL, brechas prioritarias y recomendaciones de desarrollo."
+      }
+    ],
+    "diagrama_mermaid": "flowchart TD\n    A[Postulación del líder] --> B{Filtros de entrada}\n    B -->|Descarta| X[No apto / Cierre]\n    B -->|Apto| C{Tipo de postulación}\n    C -->|Desarrollo tecnológico| D1[IRL: TRL BRL IPRL MRL FRL TERL]\n    C -->|Sector salud| D2[IRL: TRL BRL IPRL MRL FRL TERL + RRL]\n    C -->|Adaptación tecnológica| D3[IRL: BRL IPRL MRL FRL TERL]\n    D1 --> E[Score DeepTech ponderado]\n    D2 --> E\n    D3 --> E\n    E --> F[Diagnóstico de madurez + gráfico]\n    F --> G[Análisis y contraste con IA]\n    G --> H[Resultado: selección + brechas + recomendaciones]\n"
+  },
+  "imagenes": {
+    "titulo": "Catálogo de imágenes y assets — Proyecto DeepTech U. Rosario",
+    "proposito": "Descripciones estructuradas para que una IA entienda, use y mejore cada asset (alt text, contexto, uso recomendado).",
+    "logos_universidad": [
+      {
+        "archivo": "02_recursos/logos/LOGO HORIZONTAL UR ROJO.png",
+        "orientacion": "horizontal",
+        "color": "rojo institucional sobre fondo transparente/blanco",
+        "descripcion_visual": "Escudo heráldico rojo de la Universidad del Rosario a la izquierda y wordmark 'Universidad del Rosario' a la derecha, en dos líneas tipográficas sans-serif rojas.",
+        "elementos": [
+          "escudo con cruz, corona y ornamentos barrocos",
+          "texto Universidad del",
+          "texto Rosario en mayor tamaño"
+        ],
+        "uso_recomendado": "Encabezados de formularios, PPT, reportes PDF y UI en fondos claros. Preferido para franjas anchas.",
+        "alt_text": "Logo horizontal de la Universidad del Rosario en rojo: escudo heráldico y nombre de la universidad",
+        "mejora_sugerida": "Exportar también versión SVG; asegurar espacio libre mínimo alrededor del escudo; no recolorizar fuera de la paleta institucional."
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO HORIZONTAL UR NEGRO.png",
+        "orientacion": "horizontal",
+        "color": "negro",
+        "descripcion_visual": "Misma composición horizontal del logo institucional en negro monocromo.",
+        "uso_recomendado": "Impresión B/N, documentos formales, fondos claros sin color.",
+        "alt_text": "Logo horizontal Universidad del Rosario en negro",
+        "mejora_sugerida": "Usar cuando el rojo no es viable (fax, grises)."
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO HORIZONTAL UR BLANCO.png",
+        "orientacion": "horizontal",
+        "color": "blanco",
+        "descripcion_visual": "Misma composición horizontal en blanco (knockout) para fondos oscuros o rojo institucional.",
+        "uso_recomendado": "Fondos rojos, negros o fotografía oscura. Header de apps dark mode.",
+        "alt_text": "Logo horizontal Universidad del Rosario en blanco",
+        "mejora_sugerida": "Verificar contraste AA/AAA sobre el fondo real."
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO VERTICAL UR ROJO.png",
+        "orientacion": "vertical",
+        "color": "rojo",
+        "descripcion_visual": "Escudo heráldico rojo centrado arriba; debajo wordmark 'Universidad del Rosario' centrado en dos líneas.",
+        "uso_recomendado": "Portadas, splash screens, favicons ampliados, materiales verticales.",
+        "alt_text": "Logo vertical de la Universidad del Rosario en rojo con escudo y nombre centrados",
+        "mejora_sugerida": "Ideal para espacios cuadrados o altos; no aplastar el escudo."
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO VERTICAL UR NEGRO.png",
+        "orientacion": "vertical",
+        "color": "negro",
+        "descripcion_visual": "Versión vertical monocroma negra del logo institucional.",
+        "uso_recomendado": "Impresión B/N vertical.",
+        "alt_text": "Logo vertical Universidad del Rosario en negro"
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO VERTICAL UR BLANCO.png",
+        "orientacion": "vertical",
+        "color": "blanco",
+        "descripcion_visual": "Versión vertical blanca (knockout) del logo institucional.",
+        "uso_recomendado": "Fondos oscuros o color institucional.",
+        "alt_text": "Logo vertical Universidad del Rosario en blanco"
+      },
+      {
+        "archivo": "02_recursos/logos/LogoUR-MEN-H-Rd.jpg",
+        "orientacion": "horizontal",
+        "color": "rojo",
+        "formato": "jpg",
+        "descripcion_visual": "Variante horizontal del logo (MEN) en rojo, formato JPEG.",
+        "uso_recomendado": "Cuando se requiera JPEG (email, CMS legacy). Preferir PNG si hay transparencia.",
+        "alt_text": "Logo horizontal Universidad del Rosario rojo (JPEG)",
+        "mejora_sugerida": "Preferir PNG/SVG; JPEG puede mostrar fondo blanco no deseado."
+      },
+      {
+        "archivo": "02_recursos/logos/LogoUR-MEN-H-Wh.png",
+        "orientacion": "horizontal",
+        "color": "blanco",
+        "descripcion_visual": "Variante horizontal blanca (MEN).",
+        "alt_text": "Logo horizontal Universidad del Rosario blanco (MEN)"
+      },
+      {
+        "archivo": "02_recursos/logos/LogoUR-MEN-V-Rd.jpg",
+        "orientacion": "vertical",
+        "color": "rojo",
+        "formato": "jpg",
+        "descripcion_visual": "Variante vertical del logo (MEN) en rojo, JPEG.",
+        "alt_text": "Logo vertical Universidad del Rosario rojo (JPEG MEN)"
+      },
+      {
+        "archivo": "02_recursos/logos/LogoUR-MEN-V-Wh.png",
+        "orientacion": "vertical",
+        "color": "blanco",
+        "descripcion_visual": "Variante vertical blanca (MEN).",
+        "alt_text": "Logo vertical Universidad del Rosario blanco (MEN)"
+      },
+      {
+        "archivo": "02_recursos/logos/LOGO UR.pdf",
+        "orientacion": "vectorial",
+        "formato": "pdf",
+        "descripcion_visual": "Archivo vectorial maestro del logo institucional.",
+        "uso_recomendado": "Fuente de verdad para diseño gráfico e impresión de alta calidad.",
+        "alt_text": "Archivo vectorial del logo Universidad del Rosario",
+        "mejora_sugerida": "Extraer SVG desde este PDF para web y UI."
+      }
+    ],
+    "imagenes_powerpoint": [
+      {
+        "archivo": "02_recursos/imagenes_referencia/slide1_img1.jpg",
+        "slide": 1,
+        "titulo_slide": "Imágenes de la herramienta de evaluación, selección y diagnóstico DeepTechs Rosario",
+        "tema": "biotecnología / deeptech en ciencias de la vida",
+        "descripcion_visual": "Ilustración 3D de una doble hélice de ADN en tonos beige/rosado. Una mano con guante de látex y pinzas de precisión manipula o inserta un fragmento molecular rojo en la hélice, evocando edición génica (tipo CRISPR).",
+        "mensaje_comunicativo": "Asocia el programa DeepTech con investigación científica de frontera (biotecnología, genómica).",
+        "alt_text": "Mano enguantada editando una hélice de ADN con pinzas, metáfora de ingeniería genética y deeptech en salud",
+        "uso_recomendado": "Hero image de biotech/salud; portada del módulo de postulación sector salud o diagnóstico RRL.",
+        "mejora_sugerida": "Añadir pie de foto contextual ('DeepTech en ciencias de la vida'); preferir imagen con licencia propia; opcional overlay sutil del logo UR en esquina."
+      },
+      {
+        "archivo": "02_recursos/imagenes_referencia/slide2_img2.jpg",
+        "slide": 2,
+        "titulo_slide": "Imágenes de la herramienta de evaluación, selección y diagnóstico DeepTechs Rosario",
+        "tema": "robótica / hardware / STEM",
+        "descripcion_visual": "Vista cenital de una persona con gafas montando o ajustando un robot de cartón/prototipo DIY con cables de colores, sensores y electrónica expuesta. Sobre la mesa hay un portátil y piezas amarillas de montaje tipo maker.",
+        "mensaje_comunicativo": "Asocia DeepTech con prototipado, hardware, robótica y transferencia tecnológica práctica.",
+        "alt_text": "Persona ensamblando un prototipo robótico con electrónica y laptop en un entorno maker",
+        "uso_recomendado": "Hero de ingeniería, prototipos, adaptación tecnológica o sección de equipo de trabajo.",
+        "mejora_sugerida": "Diversificar géneros/disciplinas en el set de imágenes; alinear color grade con rojo institucional; añadir caption 'Prototipado y desarrollo tecnológico'."
+      },
+      {
+        "slide": 3,
+        "tipo": "diagrama_flujo",
+        "titulo_slide": "Proceso selección y evaluación",
+        "descripcion_visual": "Diagrama nativo de PowerPoint (formas y flechas) que describe: (1) dimensiones de diagnóstico, (2) filtros de descarte de entrada, (3) tres tipos de postulación con sus dimensiones KTH IRL, (4) medición de madurez con análisis IA.",
+        "nota": "Las formas no son imágenes raster; el contenido estructurado está en proceso_seleccion_deeptech.json y en diagrama_proceso_deeptech.md / .mmd",
+        "mejora_sugerida": "Reemplazar el diagrama nativo por un diagrama limpio generado (diagrama_proceso_deeptech.png o mermaid) para mejor legibilidad y accesibilidad."
+      }
+    ],
+    "paleta_institucional_sugerida": {
+      "rojo_principal": "#C8102E",
+      "negro": "#1A1A1A",
+      "blanco": "#FFFFFF",
+      "gris_texto": "#333333",
+      "fondo_claro": "#F7F7F7"
+    }
+  }
+}

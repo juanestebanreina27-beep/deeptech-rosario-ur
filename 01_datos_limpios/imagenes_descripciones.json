@@ -1,0 +1,143 @@
+{
+  "titulo": "Catálogo de imágenes y assets — Proyecto DeepTech U. Rosario",
+  "proposito": "Descripciones estructuradas para que una IA entienda, use y mejore cada asset (alt text, contexto, uso recomendado).",
+  "logos_universidad": [
+    {
+      "archivo": "02_recursos/logos/LOGO HORIZONTAL UR ROJO.png",
+      "orientacion": "horizontal",
+      "color": "rojo institucional sobre fondo transparente/blanco",
+      "descripcion_visual": "Escudo heráldico rojo de la Universidad del Rosario a la izquierda y wordmark 'Universidad del Rosario' a la derecha, en dos líneas tipográficas sans-serif rojas.",
+      "elementos": [
+        "escudo con cruz, corona y ornamentos barrocos",
+        "texto Universidad del",
+        "texto Rosario en mayor tamaño"
+      ],
+      "uso_recomendado": "Encabezados de formularios, PPT, reportes PDF y UI en fondos claros. Preferido para franjas anchas.",
+      "alt_text": "Logo horizontal de la Universidad del Rosario en rojo: escudo heráldico y nombre de la universidad",
+      "mejora_sugerida": "Exportar también versión SVG; asegurar espacio libre mínimo alrededor del escudo; no recolorizar fuera de la paleta institucional."
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO HORIZONTAL UR NEGRO.png",
+      "orientacion": "horizontal",
+      "color": "negro",
+      "descripcion_visual": "Misma composición horizontal del logo institucional en negro monocromo.",
+      "uso_recomendado": "Impresión B/N, documentos formales, fondos claros sin color.",
+      "alt_text": "Logo horizontal Universidad del Rosario en negro",
+      "mejora_sugerida": "Usar cuando el rojo no es viable (fax, grises)."
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO HORIZONTAL UR BLANCO.png",
+      "orientacion": "horizontal",
+      "color": "blanco",
+      "descripcion_visual": "Misma composición horizontal en blanco (knockout) para fondos oscuros o rojo institucional.",
+      "uso_recomendado": "Fondos rojos, negros o fotografía oscura. Header de apps dark mode.",
+      "alt_text": "Logo horizontal Universidad del Rosario en blanco",
+      "mejora_sugerida": "Verificar contraste AA/AAA sobre el fondo real."
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO VERTICAL UR ROJO.png",
+      "orientacion": "vertical",
+      "color": "rojo",
+      "descripcion_visual": "Escudo heráldico rojo centrado arriba; debajo wordmark 'Universidad del Rosario' centrado en dos líneas.",
+      "uso_recomendado": "Portadas, splash screens, favicons ampliados, materiales verticales.",
+      "alt_text": "Logo vertical de la Universidad del Rosario en rojo con escudo y nombre centrados",
+      "mejora_sugerida": "Ideal para espacios cuadrados o altos; no aplastar el escudo."
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO VERTICAL UR NEGRO.png",
+      "orientacion": "vertical",
+      "color": "negro",
+      "descripcion_visual": "Versión vertical monocroma negra del logo institucional.",
+      "uso_recomendado": "Impresión B/N vertical.",
+      "alt_text": "Logo vertical Universidad del Rosario en negro"
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO VERTICAL UR BLANCO.png",
+      "orientacion": "vertical",
+      "color": "blanco",
+      "descripcion_visual": "Versión vertical blanca (knockout) del logo institucional.",
+      "uso_recomendado": "Fondos oscuros o color institucional.",
+      "alt_text": "Logo vertical Universidad del Rosario en blanco"
+    },
+    {
+      "archivo": "02_recursos/logos/LogoUR-MEN-H-Rd.jpg",
+      "orientacion": "horizontal",
+      "color": "rojo",
+      "formato": "jpg",
+      "descripcion_visual": "Variante horizontal del logo (MEN) en rojo, formato JPEG.",
+      "uso_recomendado": "Cuando se requiera JPEG (email, CMS legacy). Preferir PNG si hay transparencia.",
+      "alt_text": "Logo horizontal Universidad del Rosario rojo (JPEG)",
+      "mejora_sugerida": "Preferir PNG/SVG; JPEG puede mostrar fondo blanco no deseado."
+    },
+    {
+      "archivo": "02_recursos/logos/LogoUR-MEN-H-Wh.png",
+      "orientacion": "horizontal",
+      "color": "blanco",
+      "descripcion_visual": "Variante horizontal blanca (MEN).",
+      "alt_text": "Logo horizontal Universidad del Rosario blanco (MEN)"
+    },
+    {
+      "archivo": "02_recursos/logos/LogoUR-MEN-V-Rd.jpg",
+      "orientacion": "vertical",
+      "color": "rojo",
+      "formato": "jpg",
+      "descripcion_visual": "Variante vertical del logo (MEN) en rojo, JPEG.",
+      "alt_text": "Logo vertical Universidad del Rosario rojo (JPEG MEN)"
+    },
+    {
+      "archivo": "02_recursos/logos/LogoUR-MEN-V-Wh.png",
+      "orientacion": "vertical",
+      "color": "blanco",
+      "descripcion_visual": "Variante vertical blanca (MEN).",
+      "alt_text": "Logo vertical Universidad del Rosario blanco (MEN)"
+    },
+    {
+      "archivo": "02_recursos/logos/LOGO UR.pdf",
+      "orientacion": "vectorial",
+      "formato": "pdf",
+      "descripcion_visual": "Archivo vectorial maestro del logo institucional.",
+      "uso_recomendado": "Fuente de verdad para diseño gráfico e impresión de alta calidad.",
+      "alt_text": "Archivo vectorial del logo Universidad del Rosario",
+      "mejora_sugerida": "Extraer SVG desde este PDF para web y UI."
+    }
+  ],
+  "imagenes_powerpoint": [
+    {
+      "archivo": "02_recursos/imagenes_referencia/slide1_img1.jpg",
+      "slide": 1,
+      "titulo_slide": "Imágenes de la herramienta de evaluación, selección y diagnóstico DeepTechs Rosario",
+      "tema": "biotecnología / deeptech en ciencias de la vida",
+      "descripcion_visual": "Ilustración 3D de una doble hélice de ADN en tonos beige/rosado. Una mano con guante de látex y pinzas de precisión manipula o inserta un fragmento molecular rojo en la hélice, evocando edición génica (tipo CRISPR).",
+      "mensaje_comunicativo": "Asocia el programa DeepTech con investigación científica de frontera (biotecnología, genómica).",
+      "alt_text": "Mano enguantada editando una hélice de ADN con pinzas, metáfora de ingeniería genética y deeptech en salud",
+      "uso_recomendado": "Hero image de biotech/salud; portada del módulo de postulación sector salud o diagnóstico RRL.",
+      "mejora_sugerida": "Añadir pie de foto contextual ('DeepTech en ciencias de la vida'); preferir imagen con licencia propia; opcional overlay sutil del logo UR en esquina."
+    },
+    {
+      "archivo": "02_recursos/imagenes_referencia/slide2_img2.jpg",
+      "slide": 2,
+      "titulo_slide": "Imágenes de la herramienta de evaluación, selección y diagnóstico DeepTechs Rosario",
+      "tema": "robótica / hardware / STEM",
+      "descripcion_visual": "Vista cenital de una persona con gafas montando o ajustando un robot de cartón/prototipo DIY con cables de colores, sensores y electrónica expuesta. Sobre la mesa hay un portátil y piezas amarillas de montaje tipo maker.",
+      "mensaje_comunicativo": "Asocia DeepTech con prototipado, hardware, robótica y transferencia tecnológica práctica.",
+      "alt_text": "Persona ensamblando un prototipo robótico con electrónica y laptop en un entorno maker",
+      "uso_recomendado": "Hero de ingeniería, prototipos, adaptación tecnológica o sección de equipo de trabajo.",
+      "mejora_sugerida": "Diversificar géneros/disciplinas en el set de imágenes; alinear color grade con rojo institucional; añadir caption 'Prototipado y desarrollo tecnológico'."
+    },
+    {
+      "slide": 3,
+      "tipo": "diagrama_flujo",
+      "titulo_slide": "Proceso selección y evaluación",
+      "descripcion_visual": "Diagrama nativo de PowerPoint (formas y flechas) que describe: (1) dimensiones de diagnóstico, (2) filtros de descarte de entrada, (3) tres tipos de postulación con sus dimensiones KTH IRL, (4) medición de madurez con análisis IA.",
+      "nota": "Las formas no son imágenes raster; el contenido estructurado está en proceso_seleccion_deeptech.json y en diagrama_proceso_deeptech.md / .mmd",
+      "mejora_sugerida": "Reemplazar el diagrama nativo por un diagrama limpio generado (diagrama_proceso_deeptech.png o mermaid) para mejor legibilidad y accesibilidad."
+    }
+  ],
+  "paleta_institucional_sugerida": {
+    "rojo_principal": "#C8102E",
+    "negro": "#1A1A1A",
+    "blanco": "#FFFFFF",
+    "gris_texto": "#333333",
+    "fondo_claro": "#F7F7F7"
+  }
+}
