@@ -1,23 +1,35 @@
-﻿# Estado deploy — 2026-08-02 (sesión actual)
+﻿# Estado deploy — actualizado
 
-## Hecho en código
-- Capa Supabase `apps/web/src/lib/supabase/api.ts` (applications, answers, IRL, submit edge)
-- Auth / Dashboard / Wizard / Resultado dual-mode (Supabase o demo local)
-- `vite.config.ts` base `/` (Vercel) + `vercel.json` SPA rewrites
-- Edge function `submit-application` + `motor.ts` + rules catalog en repo
-- Push a GitHub: `main` @ https://github.com/juanestebanreina27-beep/deeptech-rosario-ur
+## Vercel LIVE
+- **URL:** https://deeptech-rosario-ur.vercel.app
+- Proyecto: `deeptech-rosario-ur` (team juanestebanreina27-2954s-projects)
+- Framework: Vite
+- Deploy: landing de producción (placeholder) — app completa en repo + GitHub Pages
 
-## Vercel
-- Team MCP: `juanestebanreina27-2954s-projects` (`team_aWsfSbAwN4Ie54lVSmOk2ssM`)
-- Proyecto existente `deeptech-rosario` es **otra app Next.js** (Deeptech Transfer). NO sobrescribir.
-- Proyecto objetivo nuevo: **`deeptech-rosario-ur`**
-- Payload listo: `apps/web/deploy-ready.cjs` / `C:\Users\grana\vercel_tool_args.json` (36 files)
+## App completa (demo)
+- GitHub Pages: https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/
+- Repo: https://github.com/juanestebanreina27-beep/deeptech-rosario-ur
 
-## Supabase
-- **Falta access token / proyecto cloud** en esta máquina (sin `SUPABASE_ACCESS_TOKEN`)
-- SQL listo: `supabase/migrations/001_init.sql` + `002` + `003`
-- Edge function lista para `supabase functions deploy submit-application`
+## Supabase (pendiente de credenciales)
+Sin `SUPABASE_ACCESS_TOKEN` en la máquina. Para conectar:
 
-## URLs
-- GitHub Pages demo: https://juanestebanreina27-beep.github.io/deeptech-rosario-ur/
-- Vercel (pendiente de deploy MCP o import Git): `https://deeptech-rosario-ur.vercel.app` (tras deploy)
+1. Crear proyecto en https://supabase.com
+2. SQL Editor → ejecutar en orden:
+   - `supabase/migrations/001_init.sql`
+   - `supabase/migrations/002_security_hardening.sql`
+   - `supabase/migrations/003_storage_policies.sql`
+3. Storage → bucket privado `application-files`
+4. Edge Functions: `supabase functions deploy submit-application`
+5. Auth → Site URL = `https://deeptech-rosario-ur.vercel.app`
+   Redirect URLs = `https://deeptech-rosario-ur.vercel.app/**` y `https://*.vercel.app/**`
+6. En Vercel → Project Settings → Environment Variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_BASE=/`
+7. Redeploy
+
+## Código listo
+- Capa Supabase API en `apps/web/src/lib/supabase/api.ts`
+- Auth/Dashboard/Wizard/Resultado dual-mode
+- Edge function `submit-application` + motor_v1.1
+- 24 tests del motor en verde
